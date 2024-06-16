@@ -977,6 +977,13 @@ For group names:
 · 1E: Browser Service Elections
 
 
+Network Hacking:
+
+Promiscuous mode -  allows you to intercept and read each network packet that arrives in its entirety
+
+DAI - Dynamic ARP inspection - prevents MiTM 
+
+
 Windows OS:
 
 Windows OS has default TTL value of 128
