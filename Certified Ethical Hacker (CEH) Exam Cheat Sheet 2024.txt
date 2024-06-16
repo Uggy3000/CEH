@@ -1,5 +1,15 @@
 Basics
 
+
+CIA Triad - Confidentiality, integrity, availability, Authenticity, Non-repudiation
+
+
+Confidentiality - is important to protect sensitive information from being disclosed to unauthorized parties. This includes protecting data at rest, in transit, and in use. Common techniques used to maintain confidentiality include encryption, access controls, and data masking.
+Integrity - is important to ensure that information has not been tampered with or modified in an unauthorized way. This includes protecting data from unauthorized modification, deletion or addition. Common techniques used to maintain integrity include digital signatures, message authentication codes, and data hashing.
+Availability - is important to ensure that information and systems are accessible to authorized users when they need them. This includes protecting against denial of service attacks and ensuring that systems are highly available and can withstand failures. Common techniques used to maintain availability include load balancing, redundancy, and disaster recovery planning.
+Authenticity - is important to ensure that information and communication come from a trusted source. This includes protecting against impersonation, spoofing and other types of identity fraud. Common techniques used to establish authenticity include authentication, digital certificates, and biometric identification.
+Non-repudiation - is important to ensure that a party cannot deny having sent or received a message or transaction. This includes protecting against message tampering and replay attacks. Common techniques used to establish non-repudiation include digital signatures, message authentication codes and timestamps.
+
 Attack Types
 
 OS: Attacks targeting default OS settings
@@ -70,7 +80,7 @@ Only one key used to encrypt and decrypt
 
 SYMMETRIC ALGORITHMS
 DES: 56bit key (8bit parity); fixed block
-3DES: 168bit key; keys ≤ 3
+3DES: 168bit key; keys ≤ 3 (56bit *3)
 AES: 128, 192, or 256; replaced DES
 IDEA: 128bit key
 Twofish: Block cipher key size ≤ 256bit
@@ -312,7 +322,7 @@ OSI model
 6	Presentation	Translation of data between a networking service and an application; including character encoding, data compression and encryption/decryption ( TLS; SSL; AFP; LPP; ICA)
 5	Session	Managing communication sessions, i.e., continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes ( PAP; RPC; SMB; SOCKS; SMPP)
 4	Transport	Segment, Datagram	Reliable transmission of data segments between points on a network, including segmentation, acknowledgement and multiplexing ( NetBIOS; TCP; UDP; iSCSI; AH; TFTP)
-3	Network	Packet	Structuring and managing a multi-node network, including addressing, routing and traffic control (NAT; ICMP; RIP; IP; OSPF; IPsec)
+3	Network	Packet	Structuring and managing a multi-node network, including addressing, routing and traffic control (NAT; ICMP; RIP; IP; OSPF; IPsec; Packet filtering)
 2	Data link	Frame	Transmission of data frames between two nodes connected by a physical layer (ARP; DTP; Frame rate; STP; L2TP; PPP; PPTP; VLAN)
 1	Physical	Bit, Symbol	Transmission and reception of raw bit streams over a physical medium  ( Fiber optics; RS232; IEEE 1394 Interfaces; DSL; ISDN)
 
@@ -1018,11 +1028,21 @@ This type of jailbreak is like a semi-tethered jailbreak in which when the devic
 
 
 
-WiFi Hacking:
+WiFi LTE RADIO Hacking:
 
 Zigbee - Protocol based on the IEEE 203.15.4 standard; - Range of 10-100 m. - Designed for small-scale projects which need wireless connection.
 
 Dragonblood - WPA3 
+
+Evil twin attack - SSID Clone
+
+Wardriving: Collecting SSID's
+
+Jamming signal attack: blocking radio waves 
+
+WPA3: 192-bit cryptographic strength in WPA3-Enterprise mode (AES-256 in GCM mode with SHA-384 as HMAC), and still mandates the use of CCMP-128 (AES-128 in CCM mode) as the minimum encryption algorithm in WPA3-Personal mode.
+
+
 
 
 
@@ -1031,6 +1051,31 @@ SSL/TLS
 SSLv2 - DROWN attack
 
 OpenSSL - heartbleed 
+
+
+WireShark
+
+Filter examples:
+
+ip.addr == 10.0.0.1 [Sets a filter for any packet with 10.0.0.1, as either the source or dest]  
+ip.addr==10.0.0.1  && ip.addr==10.0.0.2 [sets a conversation filter between the two defined IP addresses]  
+tcp.time_delta > .250 [sets a filter to display all tcp packets that have a delta time of greater than 250mSec in the context of their stream. Note, this filter requires TCP Conversation Timestamps to be calculated. To learn to do that, click here.]  
+tcp.port==4000 [sets a filter for any TCP packet with 4000 as a source or dest port]  
+tcp.flags == 0x012 [displays all TCP SYN/ACK packets - shows the connections that had a positive response. Related to this is tcp.flags.syn==1]  
+ip.addr == 10.0.0.0/24 [Shows packets to and from any address in the 10.0.0.0/24 space]  
+frame contains traffic [displays all packets that contain the word ‘traffic’. Excellent when searching on a specific string or user ID]  
+!(arp or icmp or stp) [masks out arp, icmp, stp, or whatever other protocols may be background noise. Allowing you to focus on the traffic of interest]  
+eth[0x47:2] == 01:80 [This is an example of an offset filter. It sets a filter for the HEX values of 0x01 and 0x80 specifically at the offset location of 0x47]  
+tcp.analysis.flags && !tcp.analysis.window_update [displays all retransmissions, duplicate acks, zero windows, and more in the trace. Helps when tracking down slow application performance and packet loss. It will not include the window updates, since these aren't really important for me to see in most cases.] 
+
+IPSEC:
+
+IPsec suite:
+
+· Authentication Header (AH) - ensures connectionless integrity
+· Encapsulating Security Protocol (ESP) - provides confidentiality
+· Security Association (SA)
+· IKE - IKEv1 or IKEv2, depending on the version) is the protocol used to set up a security association (SA) in the IPsec protocol suite. IKE builds upon the Oakley protocol and ISAKMP. IKE uses X.509 certificates for authentication 
 
 SQL hacking and examples
 
