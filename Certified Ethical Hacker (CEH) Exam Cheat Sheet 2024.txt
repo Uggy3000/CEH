@@ -17,10 +17,17 @@ App level: Application code attacks
 Shrink Wrap: off-the-shelf scripts and code
 Misconfiguration: not configured well
 
+Testing Types
+
+Black-box - has none information about the internal work
+Gray box  - have some information about the internal work
+White box - have full information about the internal work
+
+
 5 PHASES TO A Ethical Hacking
 
 
-1.Reconnaissance
+1. Reconnaissance
 2. Scanning & Enumeration
 3. Gaining Access
 4. Maintaining Access
@@ -34,6 +41,15 @@ PHASES TO A Penetration Tester (Pen Testing)
 3. The Post-Attack 
 
 
+Types of penetration testing
+Internal & External Network Penetration Testing
+Wireless Penetration Testing
+Web Application Testing
+Mobile Application Testing
+Build and Configuration Review
+Social Engineering
+Cloud Penetration Testing
+Agile Penetration Testing
 
 Legal
 18 U.S.C 1029 & 1030	
@@ -292,6 +308,7 @@ WINS:	42
 TACACS:	49	
 DNS:	53	TCP/UDP
 Kerberos:	88	UDP
+NTP 123 TCP 
 NetBIOS/SMB:	137-139
 SMB v2/v3 over TCP 445
 IMAP:	143 / 993 SSL TCP
@@ -323,7 +340,7 @@ OSI model
 5	Session	Managing communication sessions, i.e., continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes ( PAP; RPC; SMB; SOCKS; SMPP)
 4	Transport	Segment, Datagram	Reliable transmission of data segments between points on a network, including segmentation, acknowledgement and multiplexing ( NetBIOS; TCP; UDP; iSCSI; AH; TFTP)
 3	Network	Packet	Structuring and managing a multi-node network, including addressing, routing and traffic control (NAT; ICMP; RIP; IP; OSPF; IPsec; Packet filtering)
-2	Data link	Frame	Transmission of data frames between two nodes connected by a physical layer (ARP; DTP; Frame rate; STP; L2TP; PPP; PPTP; VLAN)
+2	Data link	Frame	Transmission of data frames between two nodes connected by a physical layer (ARP; DTP; Frame rate; STP; L2TP; PPP; PPTP; VLAN Sniffers )
 1	Physical	Bit, Symbol	Transmission and reception of raw bit streams over a physical medium  ( Fiber optics; RS232; IEEE 1394 Interfaces; DSL; ISDN)
 
 
@@ -615,7 +632,7 @@ DNSstuff
 DNS-Digger
 
 Website Mirroring
-Wget
+Wget - Banner grabbing attack
 Archive
 GoogleCache
 
@@ -636,6 +653,7 @@ Wireshark
 Ace
 KerbSniff
 Ettercap
+Bettercap
 
 Keyloggers and Screen Capture
 KeyProwler
@@ -1045,7 +1063,11 @@ Evil twin attack - SSID Clone
 
 Wardriving: Collecting SSID's
 
-Jamming signal attack: blocking radio waves 
+Jamming signal attack: blocking radio waves - SINR SDR
+
+Sinkhole Attack - attract network traffic by advertising its fake routing update
+
+
 
 WPA3: 192-bit cryptographic strength in WPA3-Enterprise mode (AES-256 in GCM mode with SHA-384 as HMAC), and still mandates the use of CCMP-128 (AES-128 in CCM mode) as the minimum encryption algorithm in WPA3-Personal mode.
 
