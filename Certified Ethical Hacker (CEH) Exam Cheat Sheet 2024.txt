@@ -44,7 +44,7 @@ Asia-Pacific Network Coordination Centre (APNIC)
 Latin American and Caribbean Internet Addresses Registry (LACNIC)	
 Réseaux IP Européens Network Coordination Centre (RIPE NCC)	
 
-The SNMP Management Information Base (MIB)
+Windows The SNMP Management Information Base (MIB)
 
 DHCP.MIB	Microsoft-defined MIB that contains object types for monitoring the network traffic between remote hosts and DHCP servers
 HOSTMIB.MIB	Contains object types for monitoring and managing host resources
