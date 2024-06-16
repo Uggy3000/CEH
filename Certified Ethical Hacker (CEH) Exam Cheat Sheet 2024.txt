@@ -23,3 +23,24 @@ PHASES TO A Penetration Tester (Pen Testing)
 2. The Attack 
 3. The Post-Attack 
 
+
+
+Legal
+18 U.S.C 1029 & 1030	
+RFC 1918 – Private IP Standard	SOX – Corporate Finance Processes
+RFC 3227 – Collecting and storing data	GLBA – Personal Finance Data
+ISO 27002 – InfoSec Guideline	FERPA – Education Records
+CAN-SPAM – email marketing	FISMA – Gov Networks Security Std
+SPY-Act – License Enforcement	CVSS – Common Vuln Scoring System
+DMCA – Intellectual Property	CVE – Common Vulns and Exposure
+
+
+
+Regional Registry Coverage Map
+
+African Network Coordination Centre (AFRINIC)
+American Registry for Internet Numbers (ARIN)	
+Asia-Pacific Network Coordination Centre (APNIC)	
+Latin American and Caribbean Internet Addresses Registry (LACNIC)	
+Réseaux IP Européens Network Coordination Centre (RIPE NCC)	
+
