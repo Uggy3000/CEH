@@ -256,6 +256,7 @@ TACACS:	49
 DNS:	53	TCP/UDP
 Kerberos:	88	UDP
 NetBIOS/SMB:	137-139
+SMB v2/v3 over TCP 445
 IMAP:	143 / 993 SSL TCP
 POP3:	110 /	995 SSL TCP
 SNMP:	161/162
@@ -275,6 +276,7 @@ NTP:	123
 Back Orifice:	27374
 RPC-DCOM:	135	
 Sub7:	31337
+meterpreter / metasploit 4444
 
 
 OSI model 
