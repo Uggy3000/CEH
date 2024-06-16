@@ -870,6 +870,18 @@ SMTP provides 3 built-in-commands:
 — RCPT TO: Defines the recipients of the message.
 
 
+Cloud Solutions:
+
+Public cloud. As the name suggests, this type of cloud deployment model supports all users who want to use a computing resource, such as hardware (OS, CPU, memory, storage) or software (application server, database) on a subscription basis. The most common uses of public clouds are for application development and testing, non-mission-critical tasks such as file-sharing, and e-mail service.
+
+Private cloud. True to its name, a private cloud is typically infrastructure used by a single organization. The organization itself may manage such infrastructure to support various user groups. It could be managed by a service provider that takes care of it either on-site or off-site. Private clouds are more expensive than public clouds due to the capital expenditure involved in acquiring and maintaining them. However, private clouds are better able to address the security and privacy concerns of organizations today.
+
+Hybrid cloud. In a hybrid cloud, an organization makes use of interconnected private and public cloud infrastructure. Many organizations use this model when they need to rapidly scale up their IT infrastructure, such as when leveraging public clouds to supplement the capacity available within a private cloud. For example, if an online retailer needs more computing resources to run its Web applications during the holiday season, it may attain those resources via public clouds.
+
+Community cloud. This deployment model supports multiple organizations sharing computing resources that are part of a community; examples include universities cooperating in certain areas of research or police departments within a county or state sharing computing resources. Access to a community cloud environment is typically restricted to the members of the community.
+
+
+
 NIST:
 
 Cloud auditor
@@ -906,6 +918,112 @@ Tier-3: Registries - storing images and disseminating images to the orchestrator
 Tier-4: Orchestrators - transforming images into containers and deploying containers to hosts
 
 Tier-5: Hosts - operating and managing containers as instructed by the orchestrator
+
+
+Variuos attacks and explanations:
+
+Desynchronization Attack - A typical RFID related threat in which a tag’s key stored in the back-end database and the tag’s memory would not be the same, because of an attacker blocks the communication between the parties.
+
+Session splicing - Session splicing is an IDS evasion technique in which an attacker delivers data in multiple, smallsized packets to the target computer, making it very difficult for an IDS to detect the attack signatures.
+
+Phlashing - Phlashing is a permanent denial of service (DoS) attack that exploits a vulnerability in network-based firmware updates. Such an attack is currently theoretical but if carried out could render the target device inoperable.
+
+NetBIOS:
+
+NetBIOS is a protocol used for File and Print Sharing under all current versions of Windows. While this in itself is not a problem, the way that the protocol is implemented can be. There are a number of vulnerabilities associated with leaving this port open.
+
+NetBios services:
+
+· NETBIOS Name Service (TCP/UDP: 137)
+
+· NETBIOS Datagram Service (TCP/UDP: 138)
+
+· NETBIOS Session Service (TCP/UDP: 139)
+
+The NetBIOS Suffix, alternately called the NetBIOS End Character (endchar), is the 16th character of a NetBIOS name and indicates service type for the registered name. The number of record types is limited to 255; some commonly used values are:
+
+For unique names:
+
+· 00: Workstation Service (workstation name)
+
+· 03: Windows Messenger service
+
+· 06: Remote Access Service
+
+· 20: File Service (also called Host Record)
+
+· 21: Remote Access Service client
+
+· 1B: Domain Master Browser – Primary Domain Controller for a domain
+
+· 1D: Master Browser
+
+For group names:
+
+· 00: Workstation Service (workgroup/domain name)
+
+· 1C: Domain Controllers for a domain (group record with up to 25 IP addresses)
+
+· 1E: Browser Service Elections
+
+
+Windows OS:
+
+Windows OS has default TTL value of 128
+
+According EC-Council's courseware:
+
+"LDAP Enumeration Countermeasures
+
+- By default, LDAP traffic is transmitted unsecured; use SSL or STARTTLS technology to encrypt the traffic.
+
+- Select a username different from your email address and enable account lockout.
+
+- Restrict access to Active Directory by using software such as Citrix.
+
+- Use NTLM or any basic authentication mechanism to limit access to legitimate users.
+
+
+
+Linux OS:
+
+
+Android Iphone:
+
+Types of jailbreaking tools
+
+Many different types of jailbreaks have come out over the years, differing in how and when the exploit is applied.
+
+- Untethered Jailbreak
+
+When a jailbroken device is booting, it loads Apple's own kernel initially. The device is then exploited and the kernel is patched every time it is turned on. An untethered jailbreak is a jailbreak that does not require any assistance when it reboots up. The kernel will be patched without the help of a computer or an application. These jailbreaks are uncommon and take a significant amount of reverse engineering to create. For this reason, untethered jailbreaks have become much less popular, with none supporting recent iOS versions.
+
+
+
+- Tethered Jailbreak
+
+A tethered jailbreak is the opposite of an untethered jailbreak, in the sense that a computer is required to boot. Without a computer running the jailbreaking software, the iOS device will not be able to boot at all. While using a tethered jailbreak, the user will still be able to restart/kill the device's SpringBoard process without needing to reboot. Many early jailbreaks were offered initially as tethered jailbreaks.
+
+
+
+- Semi-tethered Jailbreak
+
+This type of jailbreak allows a user to reboot their phone normally, but upon doing so, the jailbreak and any modified code will be effectively disabled, as it will have an unpatched kernel. Any functionality independent of the jailbreak will still run as normal, such as making a phone call, texting, or using App Store applications. To be able to have a patched kernel and run modified code again, the device must be booted using a computer.
+
+
+
+- Semi-untethered Jailbreak
+
+This type of jailbreak is like a semi-tethered jailbreak in which when the device reboots, it no longer has a patched kernel, but the key difference is that the kernel can be patched without using a computer. The kernel is usually patched using an application installed on the device without patches. This type of jailbreak has become increasingly popular, with most recent jailbreaks classified as semi-untethered.
+
+
+
+WiFi Hacking:
+
+Zigbee - Protocol based on the IEEE 203.15.4 standard; - Range of 10-100 m. - Designed for small-scale projects which need wireless connection.
+
+Dragonblood - WPA3 
+
 
 
 SSL/TLS
