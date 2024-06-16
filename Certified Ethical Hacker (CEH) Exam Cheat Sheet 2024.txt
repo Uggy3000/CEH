@@ -171,6 +171,16 @@ Codes
 10 ― Host administratively prohibited	
 13 ― Communication administratively prohibited	
 
+
+ping-n 6 192.168.0.101
+/n <count>Specifies the number of echo Request messages be sent. The default is 4.
+/t Specifies ping continue sending echo Request messages to the destination until interrupted
+/s <count>Specifies that the Internet timestamp option in the IP header is used to record the time of arrival for the echo Request message and corresponding echo Reply message for each hop. The count must be a minimum of 1 and a maximum of 4. This is required for link-local destination addresses.
+/a Specifies reverse name resolution be performed on the destination IP address. If this is successful, ping displays the corresponding host name.
+
+
+
+
 CIDR
 Method of the representing IP Addresses.
 
@@ -443,10 +453,13 @@ Run
 Social Engineering
 HUMAN BASED ATTACKS
 Dumpster diving
+Elicitation
 Impersonation
 Technical Support
 Should Surfing
 Tailgating/ Piggybacking
+Quid pro quo
+
 
 COMPUTER BASED ATTACKS
 Phishing – Email SCAM
@@ -756,9 +769,10 @@ Anonymouse
 Enumeration
 SuperScan
 User2Sid/Sid2User
-LDAP Admin
+LDAP Admin 
 Xprobe
 Hyena
+JXplorer
 
 SNMP Enumeration
 SolarWinds
@@ -881,7 +895,38 @@ Cloud carrier
 A carrier cloud is a class of cloud that integrates wide area networks (WAN) and other attributes of communications service providers’ carrier-grade networks to enable the deployment of highly demanding applications in the cloud. In contrast, classic cloud computing focuses on the data center, and does not address the network connecting data centers and cloud users. This may result in unpredictable response times and security issues when business-critical data are transferred over the Internet.
 
 
+EC-Council's training materials:
 
+Tier-1: Developer machines - image creation, testing and accreditation
+
+Tier-2: Testing and accreditation systems - verification and validation of image contents, signing images and sending them to the registries
+
+Tier-3: Registries - storing images and disseminating images to the orchestrators based on requests
+
+Tier-4: Orchestrators - transforming images into containers and deploying containers to hosts
+
+Tier-5: Hosts - operating and managing containers as instructed by the orchestrator
+
+
+SSL/TLS
+
+SSLv2 - DROWN attack
+
+OpenSSL - heartbleed 
+
+SQL hacking and examples
+
+Out-of-band SQLi - leverages a database server’s ability to make DNS requests to pass data to an attacker 
+
+In-band SQL injection is the most common and easy-to-exploit of SQL injection attacks. In-band SQL injection occurs when an attacker is able to use the same communication channel to both launch the attack and gather results.
+
+- Union-based SQLi
+
+Union-based SQLi is an in-band SQL injection technique that leverages the UNION SQL operator to combine the results of two or more SELECT statements into a single result which is then returned as part of the HTTP response.
+
+- Time-based blind SQLi
+
+Time-based SQL injection is an inferential SQL injection technique that relies on sending an SQL query to the database which forces the database to wait for a specified amount of time (in seconds) before responding. The response time will indicate to the attacker whether the result of the query is TRUE or FALSE.
 
 
 Script samples:
