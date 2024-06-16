@@ -117,6 +117,9 @@ MD5: 128bit hash, expres as 32bit hex
 SHA1: 160bit hash,rq 4 use in US apps
 SHA2: 4 sep hash 224,256,384,512
 
+Public Key is used in IKE, SSL, and PGP
+
+
 TRUST MODELS
 Web of trust: Entities sign certs for each other
 Single Authority: CA at top. Trust based on CA itself
@@ -222,6 +225,64 @@ PORT NUMBERS
 0 — 1023: Well-known
 1024 — 49151: Registered
 49152 — 65535: Dynamic
+
+
+HTTP headers:
+
+Accept - Accept: text/html	
+Accept-Charset	- Accept-Charset: utf-8	
+Cache-Control	- Cache-Control: no-cache	
+Connection	- Connection: keep-alive
+Content-Encoding	-  Content-Encoding: gzip	
+HTTP2-Settings	- HTTP2-Settings: token64	
+Transfer-Encoding	- Transfer-Encoding: chunked	
+User-Agent	- User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0
+
+Common non-standard request fields
+
+X-Forwarded-For - X-Forwarded-For: 129.78.138.66, 129.78.64.103
+X-Http-Method-Override  - X-HTTP-Method-Override: DELETE
+X-Csrf-Token - X-Csrf-Token: i8XNjC4b8KVok4uw5RftR38Wgp2BFwql
+
+Standard response fields
+
+
+Access-Control-Allow-Origin, - Access-Control-Allow-Origin: *	
+Access-Control-Allow-Credentials, - Access-Control-Allow-Origin: *	
+Access-Control-Expose-Headers, - Access-Control-Allow-Origin: *	
+Access-Control-Max-Age, - Access-Control-Allow-Origin: *	
+Access-Control-Allow-Methods, - Access-Control-Allow-Origin: *	
+Access-Control-Allow-Headers[ - Access-Control-Allow-Origin: *	
+Allow - Allow: GET, HEAD	
+Cache-Control	 - Cache-Control: max-age=3600	
+Content-MD5	 - Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==	
+
+Server - Server: Apache/2.4.1 (Unix)	
+X-Frame-Options - X-Frame-Options: deny	
+
+Common non-standard response fields
+
+Content-Security-Policy, - X-WebKit-CSP: default-src 'self'
+X-Content-Security-Policy, - X-WebKit-CSP: default-src 'self'
+X-WebKit-CSP - X-WebKit-CSP: default-src 'self'
+Expect-CT - Expect-CT: max-age=604800, enforce, report-uri="https://example.example/report"
+X-Content-Type-Options - X-Content-Type-Options: nosniff
+X-Powered-By - X-Powered-By: PHP/5.4.0
+X-XSS-Protection - X-XSS-Protection: 1; mode=block
+
+
+
+
+HTTP Methods:
+GET
+HEAD
+OPTIONS
+TRACE
+DELETE
+PUT
+POST
+PATCH
+CONNECT
 
 HTTP ERROR CODES
 Status code	Meaning
@@ -1119,6 +1180,11 @@ Union-based SQLi is an in-band SQL injection technique that leverages the UNION 
 - Time-based blind SQLi
 
 Time-based SQL injection is an inferential SQL injection technique that relies on sending an SQL query to the database which forces the database to wait for a specified amount of time (in seconds) before responding. The response time will indicate to the attacker whether the result of the query is TRUE or FALSE.
+
+
+Web applicaiton hacking:
+
+
 
 
 Script samples:
