@@ -1,0 +1,25 @@
+Basics
+
+Attack Types
+
+OS: Attacks targeting default OS settings
+App level: Application code attacks
+Shrink Wrap: off-the-shelf scripts and code
+Misconfiguration: not configured well
+
+5 PHASES TO A Ethical Hacking
+
+
+1.Reconnaissance
+2. Scanning & Enumeration
+3. Gaining Access
+4. Maintaining Access
+5. Clearing Tracks
+
+
+PHASES TO A Penetration Tester (Pen Testing)
+
+1. The Pre-attack 
+2. The Attack 
+3. The Post-Attack 
+
