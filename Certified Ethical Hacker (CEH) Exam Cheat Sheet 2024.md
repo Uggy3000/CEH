@@ -21,9 +21,11 @@ Misconfiguration: not configured well
 
 # Testing Types
 
-###Black-box - has none information about the internal work
-###Gray box  - have some information about the internal work
-###White box - have full information about the internal work
+Black-box - has none information about the internal work
+
+Gray box  - have some information about the internal work
+
+White box - have full information about the internal work
 
 
 # 5 PHASES TO A Ethical Hacking
@@ -45,12 +47,19 @@ Misconfiguration: not configured well
 
 ### Types of penetration testing
 Internal & External Network Penetration Testing
+
 Wireless Penetration Testing
+
 Web Application Testing
+
 Mobile Application Testing
+
 Build and Configuration Review
+
 Social Engineering
+
 Cloud Penetration Testing
+
 Agile Penetration Testing
 
 
