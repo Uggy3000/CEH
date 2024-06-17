@@ -1,6 +1,6 @@
 > [!NOTE]
 
-### Basics of CEH
+# Basics of CEH
 
 
 CIA Triad - Confidentiality, integrity, availability, Authenticity, Non-repudiation
@@ -12,21 +12,21 @@ Availability - is important to ensure that information and systems are accessibl
 Authenticity - is important to ensure that information and communication come from a trusted source. This includes protecting against impersonation, spoofing and other types of identity fraud. Common techniques used to establish authenticity include authentication, digital certificates, and biometric identification.
 Non-repudiation - is important to ensure that a party cannot deny having sent or received a message or transaction. This includes protecting against message tampering and replay attacks. Common techniques used to establish non-repudiation include digital signatures, message authentication codes and timestamps.
 
-### Attack Types
+# Attack Types
 
 OS: Attacks targeting default OS settings
 App level: Application code attacks
 Shrink Wrap: off-the-shelf scripts and code
 Misconfiguration: not configured well
 
-### Testing Types
+# Testing Types
 
-Black-box - has none information about the internal work
-Gray box  - have some information about the internal work
-White box - have full information about the internal work
+###Black-box - has none information about the internal work
+###Gray box  - have some information about the internal work
+###White box - have full information about the internal work
 
 
-###5 PHASES TO A Ethical Hacking
+# 5 PHASES TO A Ethical Hacking
 
 
 1. Reconnaissance
