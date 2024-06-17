@@ -1,6 +1,6 @@
 ### Basics of CEH
 
-> [!IMPORTANT]
+> !IMPORTANT
 
 CIA Triad - Confidentiality, integrity, availability, Authenticity, Non-repudiation
 
