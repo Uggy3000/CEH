@@ -10,21 +10,21 @@ Availability - is important to ensure that information and systems are accessibl
 Authenticity - is important to ensure that information and communication come from a trusted source. This includes protecting against impersonation, spoofing and other types of identity fraud. Common techniques used to establish authenticity include authentication, digital certificates, and biometric identification.
 Non-repudiation - is important to ensure that a party cannot deny having sent or received a message or transaction. This includes protecting against message tampering and replay attacks. Common techniques used to establish non-repudiation include digital signatures, message authentication codes and timestamps.
 
-Attack Types
+### Attack Types
 
 OS: Attacks targeting default OS settings
 App level: Application code attacks
 Shrink Wrap: off-the-shelf scripts and code
 Misconfiguration: not configured well
 
-Testing Types
+### Testing Types
 
 Black-box - has none information about the internal work
 Gray box  - have some information about the internal work
 White box - have full information about the internal work
 
 
-5 PHASES TO A Ethical Hacking
+###5 PHASES TO A Ethical Hacking
 
 
 1. Reconnaissance
@@ -34,14 +34,14 @@ White box - have full information about the internal work
 5. Clearing Tracks
 
 
-PHASES TO A Penetration Tester (Pen Testing)
+### PHASES TO A Penetration Tester (Pen Testing)
 
 1. The Pre-attack 
 2. The Attack 
 3. The Post-Attack 
 
 
-Types of penetration testing
+### Types of penetration testing
 Internal & External Network Penetration Testing
 Wireless Penetration Testing
 Web Application Testing
@@ -52,7 +52,7 @@ Cloud Penetration Testing
 Agile Penetration Testing
 
 
-OWASP Top 10 CEHv12
+### OWASP Top 10 CEHv12
 Top 10:2021 List
 A01 Broken Access Control
 A02 Cryptographic Failures
@@ -65,7 +65,7 @@ A08 Software and Data Integrity Failures
 A09 Security Logging and Monitoring Failures
 A10 Server Side Request Forgery (SSRF)
 
-OWASP Top 10 CEHv11
+### OWASP Top 10 CEHv11
 2017 Top 10
 A1:2017-Injection
 A2:2017-Broken Authentication
@@ -79,7 +79,7 @@ A9:2017-Using Components with Known Vulnerabilities
 A10:2017-Insufficient Logging & Monitoring
 
 
-Legal
+### Legal
 18 U.S.C 1029 & 1030	
 RFC 1918 – Private IP Standard	SOX – Corporate Finance Processes
 RFC 3227 – Collecting and storing data	GLBA – Personal Finance Data
@@ -90,7 +90,7 @@ DMCA – Intellectual Property	CVE – Common Vulns and Exposure
 
 
 
-Regional Registry Coverage Map
+### Regional Registry Coverage Map
 
 African Network Coordination Centre (AFRINIC)
 American Registry for Internet Numbers (ARIN)	
@@ -98,7 +98,7 @@ Asia-Pacific Network Coordination Centre (APNIC)
 Latin American and Caribbean Internet Addresses Registry (LACNIC)	
 Réseaux IP Européens Network Coordination Centre (RIPE NCC)	
 
-Windows The SNMP Management Information Base (MIB)
+### Windows The SNMP Management Information Base (MIB)
 
 DHCP.MIB	Microsoft-defined MIB that contains object types for monitoring the network traffic between remote hosts and DHCP servers
 HOSTMIB.MIB	Contains object types for monitoring and managing host resources
@@ -106,11 +106,11 @@ LMMIB2.MIB	Covers workstation and server services
 MIB_II.MIB	Contains the Management Information Base (MIB-II), which provides a simple, workable architecture and system for managing TCP/IP-based internets
 WINS.MIB	Microsoft-defined MIB for the Windows Internet Name Service (WINS)
 
-SNMP
+### SNMP
 Uses a community string for PW
 SNMPv3 encrypts the community strings
 
-The Common Vulnerability Scoring System (CVSS) 
+### The Common Vulnerability Scoring System (CVSS) 
 none 0.0
 Low 0.1 -.3.9
 Medium 4.0 - 6.9
@@ -118,13 +118,13 @@ High 7.0 -8.9
 Critical 9.0-10.0
 
 
-XOR Logic
+### XOR Logic
 0 xor 0 = 0
 1 xor 1 = 0
 1 xor 0 = 1
 0 xor 1 = 1
 
-Cryptography
+### Cryptography
 
 SYMMETRIC ENCRYPTION
 Only one key used to encrypt and decrypt
@@ -176,7 +176,7 @@ Issuer: Entity that verifies authenticity of certificate
 
 
 
-Reconnaissance
+### Reconnaissance
 
 DEFINITION
 Gathering information on targets, whereas foot-printing is mapping out at a high level. These are interchangeable in CEH.
@@ -221,7 +221,7 @@ Client<—-ACK—- Server
 IP is removed from pool
 
 
-Scanning & Enumeration
+### Scanning & Enumeration
 
 ICMP MESSAGE TYPES	
 0: Echo Reply: Answer to type 8 Echo Request	
@@ -245,7 +245,7 @@ ping-n 6 192.168.0.101
 
 
 
-CIDR
+### CIDR
 Method of the representing IP Addresses.
 
 IPV4 NOTATION	Prefix
@@ -256,13 +256,13 @@ IPV4 NOTATION	Prefix
 /22=1024	.252.0
 /20=4096	.240.0
 
-PORT NUMBERS
+### PORT NUMBERS
 0 — 1023: Well-known
 1024 — 49151: Registered
 49152 — 65535: Dynamic
 
 
-HTTP headers:
+### HTTP headers:
 
 Accept - Accept: text/html	
 Accept-Charset	- Accept-Charset: utf-8	
@@ -273,13 +273,13 @@ HTTP2-Settings	- HTTP2-Settings: token64
 Transfer-Encoding	- Transfer-Encoding: chunked	
 User-Agent	- User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0
 
-Common non-standard request fields
+### Common non-standard request fields
 
 X-Forwarded-For - X-Forwarded-For: 129.78.138.66, 129.78.64.103
 X-Http-Method-Override  - X-HTTP-Method-Override: DELETE
 X-Csrf-Token - X-Csrf-Token: i8XNjC4b8KVok4uw5RftR38Wgp2BFwql
 
-Standard response fields
+### Standard response fields
 
 
 Access-Control-Allow-Origin, - Access-Control-Allow-Origin: *	
@@ -308,7 +308,7 @@ X-XSS-Protection - X-XSS-Protection: 1; mode=block
 
 
 
-HTTP Methods:
+### HTTP Methods:
 GET
 HEAD
 OPTIONS
@@ -394,7 +394,7 @@ Status code	Meaning
 510	Not Extended
 511	Network Authentication Required
 
-IMPORTANT PORT NUMBERS		
+### IMPORTANT PORT NUMBERS		
 	
 FTP:	20/21	
 Telnet:	23	
@@ -429,7 +429,7 @@ Sub7:	31337
 meterpreter / metasploit 4444
 
 
-OSI model 
+### OSI model 
 
 7	Application	Data	High-level protocols such as for resource sharing or remote file access, e.g. HTTP. ( SOAP; DHCP; HTTPS; HTTP; POP3; SNMP; SMTP; BOOTP; DNS; telent; SSH; IMAP)
 6	Presentation	Translation of data between a networking service and an application; including character encoding, data compression and encryption/decryption ( TLS; SSL; AFP; LPP; ICA)
@@ -440,7 +440,7 @@ OSI model
 1	Physical	Bit, Symbol	Transmission and reception of raw bit streams over a physical medium  ( Fiber optics; RS232; IEEE 1394 Interfaces; DSL; ISDN)
 
 
-NMAP
+### NMAP
 
 Nmap is the de-facto tool for this pen-test phase
 
@@ -486,7 +486,7 @@ Open = SYN/ACK, Closed= RST/ACK
 NULL: No flags set. Responses vary by OS. NULL scans are designed for Linux/ Unix machines.
 
 
-NETBIOS	
+### NETBIOS	
 nbstat	
 nbtstat -a COMPUTER 190	nbtstat -S 10 -display ses stats every 10 sec
 nbtstat -A 192.168.10.12 remote table	1B ==master browser for the subnet
@@ -494,7 +494,7 @@ nbtstat -n local name table	1C == domain controller
 nbtstat -c local name cache	1D == domain master browser
 nbtstat -r -purge name cache	
 
-Sniffing and Evasion
+### Sniffing and Evasion
 IPV4 AND IPV6
 IPv4 == unicast, multicast, and broadcast
 IPv6 == unicast, multicast, and anycast.
@@ -532,7 +532,7 @@ SAM FILE
 C:/Windows/system32/config
 
 
-Attacking a System
+### Attacking a System
 C|EH RULES FOR PASSWORDS
 Must not contain user’s name. Min 8 chars.
 3 of 4 complexity components. E.g., Special, Number, Uppercase, Lowercase
@@ -586,7 +586,7 @@ Run Once
 Run
 
 
-Social Engineering
+### Social Engineering
 HUMAN BASED ATTACKS
 Dumpster diving
 Elicitation
@@ -632,7 +632,7 @@ Dangerous SQL functions
 The following do not check size of destination buffers: gets() strcpy() stract() printf()
 
 
-Wireless  Network Hacking
+### Wireless  Network Hacking
 
 GSM
 Global System for Mobile Communication
@@ -690,7 +690,7 @@ Smurf:	Send large number of pings to the broadcast address of the subnet with so
 Fraggle Attack:	Similar to Smurf but uses UDP.
 Ping of Death:	Attacker fragments ICMP message to send to target. When the fragments are reassembled, the resultant ICMP packet is larger than max size and crashes the system
 
-Linux:
+### Linux:
 LINUX FILE SYSTEM	
 /	-Root
 /var	-Variable Data / Log Files
@@ -729,7 +729,7 @@ hping	hping3 -I -eth0 -c 10 -a 2.2.2.2 -t 100 10.0.0.1
 iptables	iptables -A FORWARD -j ACCEPT -p tcp ―dport 80
 
 
-CEH Tools
+### CEH Tools
 
 VULNERABILITY RESEARCH
 National Vuln Db
@@ -988,7 +988,7 @@ Find My Phone
 GadgetTrack
 iHound
 
-TROJANS AND MALWARE
+### TROJANS AND MALWARE
 
 Wrappers
 Elite Wrap
@@ -1014,7 +1014,7 @@ Inundator
 
 
 
-SMTP Telnet technique port 25
+### SMTP Telnet technique port 25
 
 SMTP provides 3 built-in-commands:
 — VRFY: means validates users.
@@ -1022,7 +1022,7 @@ SMTP provides 3 built-in-commands:
 — RCPT TO: Defines the recipients of the message.
 
 
-Cloud Solutions:
+### Cloud Solutions:
 
 Public cloud. As the name suggests, this type of cloud deployment model supports all users who want to use a computing resource, such as hardware (OS, CPU, memory, storage) or software (application server, database) on a subscription basis. The most common uses of public clouds are for application development and testing, non-mission-critical tasks such as file-sharing, and e-mail service.
 
@@ -1034,7 +1034,7 @@ Community cloud. This deployment model supports multiple organizations sharing c
 
 
 
-NIST:
+### NIST:
 
 Cloud auditor
 
@@ -1059,7 +1059,7 @@ Cloud carrier
 A carrier cloud is a class of cloud that integrates wide area networks (WAN) and other attributes of communications service providers’ carrier-grade networks to enable the deployment of highly demanding applications in the cloud. In contrast, classic cloud computing focuses on the data center, and does not address the network connecting data centers and cloud users. This may result in unpredictable response times and security issues when business-critical data are transferred over the Internet.
 
 
-EC-Council's training materials:
+### EC-Council's training materials:
 
 Tier-1: Developer machines - image creation, testing and accreditation
 
@@ -1072,7 +1072,7 @@ Tier-4: Orchestrators - transforming images into containers and deploying contai
 Tier-5: Hosts - operating and managing containers as instructed by the orchestrator
 
 
-Variuos attacks and explanations:
+### Variuos attacks and explanations:
 
 Desynchronization Attack - A typical RFID related threat in which a tag’s key stored in the back-end database and the tag’s memory would not be the same, because of an attacker blocks the communication between the parties.
 
@@ -1080,7 +1080,7 @@ Session splicing - Session splicing is an IDS evasion technique in which an atta
 
 Phlashing - Phlashing is a permanent denial of service (DoS) attack that exploits a vulnerability in network-based firmware updates. Such an attack is currently theoretical but if carried out could render the target device inoperable.
 
-NetBIOS:
+### NetBIOS:
 
 NetBIOS is a protocol used for File and Print Sharing under all current versions of Windows. While this in itself is not a problem, the way that the protocol is implemented can be. There are a number of vulnerabilities associated with leaving this port open.
 
@@ -1126,14 +1126,14 @@ Burp Suite
 Browser Exploitation Framework (BeEF)
 
 
-Network Hacking:
+### Network Hacking:
 
 Promiscuous mode -  allows you to intercept and read each network packet that arrives in its entirety
 
 DAI - Dynamic ARP inspection - prevents MiTM 
 
 
-Windows OS:
+### Windows OS:
 
 Windows OS has default TTL value of 128
 
@@ -1160,7 +1160,7 @@ For additional security layer, NTLM is combined with Security Support Provider.
 
 
 
-Linux APPS :
+### Linux APPS :
 
 smbclient //10.10.19.21/anonymous  (accessing smb shares)
 smbget -R smb://10.10.19.21/anonymous   (downloading smb files)
@@ -1191,7 +1191,7 @@ Steganography-
   https://futureboy.us/stegano/decinput.html (online steganography tool)
  sha256sum <filename>   (find hash of the file)
  
-Tools to know for practival:
+### More Tools to know for practical
   
 Nmap +
 Hydra
@@ -1249,7 +1249,7 @@ SSH Login - SSH username@10.10.10.10
 
 
 
-Android Iphone Hacking:
+### Android Iphone Hacking:
 
 Types of jailbreaking tools
 
@@ -1295,7 +1295,7 @@ ls
  <            android location   >                      <pc location>
 
 
-WiFi LTE RADIO Hacking:
+### WiFi LTE RADIO Hacking:
 
 Zigbee - Protocol based on the IEEE 203.15.4 standard; - Range of 10-100 m. - Designed for small-scale projects which need wireless connection.
 
@@ -1324,7 +1324,7 @@ SSLv2 - DROWN attack
 OpenSSL - heartbleed 
 
 
-WireShark
+### WireShark
 
 Filter examples:
 
@@ -1348,7 +1348,7 @@ IPsec suite:
 · Security Association (SA)
 · IKE - IKEv1 or IKEv2, depending on the version) is the protocol used to set up a security association (SA) in the IPsec protocol suite. IKE builds upon the Oakley protocol and ISAKMP. IKE uses X.509 certificates for authentication 
 
-SQL hacking and examples
+### SQL hacking and examples
 
 
  Boolean-Based Blind SQL Injection:
@@ -1402,7 +1402,7 @@ command injection
 just use ; and type your command
 ; cd ~ && pwd
 
-Web applicaiton hacking:
+### Web applicaiton hacking:
 
 Generate SSH Key Pair:
 cd ~/.ssh/id_rsa
