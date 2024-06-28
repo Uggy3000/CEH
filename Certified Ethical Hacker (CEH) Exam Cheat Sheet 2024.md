@@ -831,24 +831,37 @@ Run
 
 
 ### Social Engineering
+
 HUMAN BASED ATTACKS
+
 Dumpster diving
+
 Elicitation
+
 Impersonation
+
 Technical Support
+
 Should Surfing
+
 Tailgating/ Piggybacking
+
 Quid pro quo
 
 
-# OMPUTER BASED ATTACKS
+# COMPUTER BASED ATTACKS
 Phishing – Email SCAM
+
 Whaling – Targeting CEO’s
+
 Pharming – Evil Twin Website
 
 # TYPES OF SOCIAL ENGINEERS
+
 Insider Associates: Limited Authorized Access
+
 Insider Affiliates: Insiders by virtue of Affiliation that spoof the identity of the Insider
+
 Outsider Affiliates: Non-trusted outsider that use an access point that was left open
 
 # Physical Security
