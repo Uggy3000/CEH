@@ -617,7 +617,7 @@ Sub7:	31337
 meterpreter / metasploit 4444
 
 
-### OSI model 
+# OSI model 
 
 7	Application	Data	High-level protocols such as for resource sharing or remote file access, e.g. HTTP. ( SOAP; DHCP; HTTPS; HTTP; POP3; SNMP; SMTP; BOOTP; DNS; telent; SSH; IMAP)
 
@@ -634,7 +634,7 @@ meterpreter / metasploit 4444
 1	Physical	Bit, Symbol	Transmission and reception of raw bit streams over a physical medium  ( Fiber optics; RS232; IEEE 1394 Interfaces; DSL; ISDN)
 
 
-### NMAP
+# NMAP
 
 Nmap is the de-facto tool for this pen-test phase
 
@@ -684,7 +684,7 @@ nmap --script smb-enum-users.nse -p445 <ip>  (used to enumerate all users on rem
 
 nmap -p 445 --script=smb-enum-shares.nse, smb-enum-users.nse 10.10.19.21 (smb users and shares)
 
-#NMAP SCAN TYPES
+### NMAP SCAN TYPES
 
 TCP: 3 way handshake on all ports.
 
@@ -713,7 +713,7 @@ Open = SYN/ACK, Closed= RST/ACK
 NULL: No flags set. Responses vary by OS. NULL scans are designed for Linux/ Unix machines.
 
 
-### NETBIOS	
+# NETBIOS	
 
 nbstat	
 
@@ -727,9 +727,9 @@ nbtstat -c local name cache	1D == domain master browser
 
 nbtstat -r -purge name cache	
 
-### Sniffing and Evasion
+# Sniffing and Evasion
 
-#IPV4 AND IPV6
+### IPV4 AND IPV6
 
 IPv4 == unicast, multicast, and broadcast
 
@@ -737,28 +737,28 @@ IPv6 == unicast, multicast, and anycast.
 
 IPv6 unicast and multicast scope includes link local, site local and global.
 
-#MAC ADDRESS
+### MAC ADDRESS
 
 First half = 3 bytes (24bits) = Org UID
 
 Second half = unique number
 
-#NAT (NETWORK ADDRESS TRANSLATION)
+### NAT (NETWORK ADDRESS TRANSLATION)
 
 Basic NAT is a one-to-one mapping where each internal IP== a unique public IP.
 
 Nat overload (PAT) == port address translation. Typically used as is the cheaper option.
 
-#STATEFUL INSPECTION
+### STATEFUL INSPECTION
 Concerned with the connections. Doesn’t sniff ever packet, it just verifies if it’s a known connection, then passes along.
 
-#HTTP TUNNELLING
+### HTTP TUNNELLING
 Crafting of wrapped segments through a port rarely filtered by the Firewall (e.g., 80) to carry payloads that may otherwise be blocked.
 
-#IDS EVASION TACTICS
+### IDS EVASION TACTICS
 Slow down OR flood the network (and sneak through in the mix) OR fragmentation
 
-#TCPDUMP SYNTAX
+### TCPDUMP SYNTAX
 ~tcpdump flag(s) interface
 
 #SNORT IDS	
@@ -773,22 +773,22 @@ Span port: port mirroring	False Negative: IDS incorrectly reports stream clean
 C:/Windows/system32/config
 
 
-### Attacking a System
+# Attacking a System
 
-#C|EH RULES FOR PASSWORDS
+### C|EH RULES FOR PASSWORDS
 Must not contain user’s name. Min 8 chars.
 3 of 4 complexity components. E.g., Special, Number, Uppercase, Lowercase
 
-#ATTACK TYPES
+### ATTACK TYPES
 Passive Online: Sniffing wire, intercept clean text password / replay / MITM
 Active Online: Password guessing.
 Offline: Steal copy of password i.e., SAM file. Cracking efforts on a separate system
 Non-electronic: Social Engineering
 
-#SIDEJACKING
+### SIDEJACKING
 Steal cookies exchanged between systems and use tp perform a replay-style attack.
 
-#SESSION HIJACKING
+# SESSION HIJACKING
 
 Refers to the active attempt to steal an entire established session from a target
 
@@ -830,7 +830,7 @@ Run Once
 Run
 
 
-### Social Engineering
+# Social Engineering
 
 HUMAN BASED ATTACKS
 
@@ -974,7 +974,7 @@ Smurf:	Send large number of pings to the broadcast address of the subnet with so
 Fraggle Attack:	Similar to Smurf but uses UDP.
 Ping of Death:	Attacker fragments ICMP message to send to target. When the fragments are reassembled, the resultant ICMP packet is larger than max size and crashes the system
 
-### Linux:
+# Linux:
 LINUX FILE SYSTEM	
 /	-Root
 /var	-Variable Data / Log Files
@@ -1013,7 +1013,7 @@ hping	hping3 -I -eth0 -c 10 -a 2.2.2.2 -t 100 10.0.0.1
 iptables	iptables -A FORWARD -j ACCEPT -p tcp ―dport 80
 
 
-### CEH Tools
+# CEH Tools
 
 VULNERABILITY RESEARCH
 National Vuln Db
@@ -1272,7 +1272,7 @@ Find My Phone
 GadgetTrack
 iHound
 
-### TROJANS AND MALWARE
+# TROJANS AND MALWARE
 
 Wrappers
 
@@ -1322,21 +1322,21 @@ Theef is a Remote Access Trojan written in Delphi, which gives remote attackers 
 JPS Virus Maker is a tool to create viruses. It also has a feature for converting a virus into a worm.
 
 
-### Internet Worm Maker Thing
+# Internet Worm Maker Thing
 Internet Worm Maker Thing is an automated scripting tool used to generate malicious code. It enables you to specify criteria down to the most basic element, including the action you want it to perform, it display language, and its launch date.
 
-### Regshot
+# Regshot
 
 The purpose of this software is to compare your registry at two separate points by creating a snapshot of the registry before any system changes or when programs are added, removed, or modified and then taking a second snapshot after the modifications then comparing them.
 
 Regshot is a great utility that you can use to compare the amount of registry entries that have been changed during an installation or a change in your system settings. It is a great tool for troubleshooting and monitoring your registry.
 
-### WinPatrol
+# WinPatrol
 
 TCPView is a Windows program that will show you detailed listings of all TCP and UDP endpoints on your system, including the local and remote addresses and state of TCP connections. On Windows Server 2008, Vista, and XP, TCPView also reports the name of the process that owns the endpoint. TCPView provides a more informative and conveniently presented subset of the Netstat program that ships with Windows. The TCPView download includes Tcpvcon, a command-line version with the same functionality.
 
 
-### SMTP Telnet technique port 25
+# SMTP Telnet technique port 25
 
 SMTP provides 3 built-in-commands:
 — VRFY: means validates users.
@@ -1344,7 +1344,7 @@ SMTP provides 3 built-in-commands:
 — RCPT TO: Defines the recipients of the message.
 
 
-### Cloud Solutions:
+# Cloud Solutions:
 
 Public cloud. As the name suggests, this type of cloud deployment model supports all users who want to use a computing resource, such as hardware (OS, CPU, memory, storage) or software (application server, database) on a subscription basis. The most common uses of public clouds are for application development and testing, non-mission-critical tasks such as file-sharing, and e-mail service.
 
@@ -1356,7 +1356,7 @@ Community cloud. This deployment model supports multiple organizations sharing c
 
 
 
-### NIST:
+# NIST:
 
 Cloud auditor
 
@@ -1381,7 +1381,7 @@ Cloud carrier
 A carrier cloud is a class of cloud that integrates wide area networks (WAN) and other attributes of communications service providers’ carrier-grade networks to enable the deployment of highly demanding applications in the cloud. In contrast, classic cloud computing focuses on the data center, and does not address the network connecting data centers and cloud users. This may result in unpredictable response times and security issues when business-critical data are transferred over the Internet.
 
 
-### EC-Council's training materials:
+# EC-Council's training materials:
 
 Tier-1: Developer machines - image creation, testing and accreditation
 
@@ -1394,7 +1394,7 @@ Tier-4: Orchestrators - transforming images into containers and deploying contai
 Tier-5: Hosts - operating and managing containers as instructed by the orchestrator
 
 
-### Variuos attacks and explanations:
+# Variuos attacks and explanations:
 
 Desynchronization Attack - A typical RFID related threat in which a tag’s key stored in the back-end database and the tag’s memory would not be the same, because of an attacker blocks the communication between the parties.
 
@@ -1402,7 +1402,7 @@ Session splicing - Session splicing is an IDS evasion technique in which an atta
 
 Phlashing - Phlashing is a permanent denial of service (DoS) attack that exploits a vulnerability in network-based firmware updates. Such an attack is currently theoretical but if carried out could render the target device inoperable.
 
-### NetBIOS:
+# NetBIOS:
 
 NetBIOS is a protocol used for File and Print Sharing under all current versions of Windows. While this in itself is not a problem, the way that the protocol is implemented can be. There are a number of vulnerabilities associated with leaving this port open.
 
@@ -1448,14 +1448,14 @@ Burp Suite
 Browser Exploitation Framework (BeEF)
 
 
-### Network Hacking:
+# Network Hacking:
 
 Promiscuous mode -  allows you to intercept and read each network packet that arrives in its entirety
 
 DAI - Dynamic ARP inspection - prevents MiTM 
 
 
-### Windows OS:
+# Windows OS:
 
 Windows OS has default TTL value of 128
 
@@ -1482,7 +1482,7 @@ For additional security layer, NTLM is combined with Security Support Provider.
 
 
 
-### Linux APPS :
+# Linux APPS :
 
 smbclient //10.10.19.21/anonymous  (accessing smb shares)
 smbget -R smb://10.10.19.21/anonymous   (downloading smb files)
@@ -1513,7 +1513,7 @@ Steganography-
   https://futureboy.us/stegano/decinput.html (online steganography tool)
  sha256sum <filename>   (find hash of the file)
  
-### More Tools to know for practical
+# More Tools to know for practical
   
 Nmap +
 Hydra
@@ -1537,7 +1537,8 @@ Hashcalc
 Rainbow Crack
 netcat+
 
-Password Cracking Countermeasures
+### Password Cracking Countermeasures
+
 Change default password
 Do not store/save passwords in applications
 Do not use guessable passwords
@@ -1660,6 +1661,12 @@ Method: DELETE, POST, GET, PUT,
 REST API
 
 Layered system, Uniform interface , Cacheability ,Statelessness 
+
+
+SOAP is the Simple Object Access Protocol
+
+SOAP uses an XML data format
+
 ### WireShark
 
 Filter examples:
