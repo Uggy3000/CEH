@@ -299,6 +299,8 @@ DNS footprinting: whois, nslookup, dig
 
 port 53 nslokup (UDP), Zone xfer (TCP)
 
+DNS configured to Open resolver can lead to amplification attack 
+
 #TCP HEADER FLAGS
 
 URG: Indicates data being sent out of band
