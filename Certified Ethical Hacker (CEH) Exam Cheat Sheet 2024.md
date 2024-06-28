@@ -1275,27 +1275,65 @@ iHound
 ### TROJANS AND MALWARE
 
 Wrappers
+
 Elite Wrap
 
 Monitoring Tools
+
 HiJackThis
 CurrPorts
 Fport
 
 Attack Tools
+
 Netcat
 Nemesis
 
 IDS
+
 Snort
 
 Evasion Tools
+
 ADMutate
 NIDSBench
 IDSInformer
 Inundator
 
+### MoSucker
 
+MoSucker is a visual basic Trojan. MoSucker's edit server program. It has a client with the same layout as sub Seven's client.
+MoSucker is a powerful backdoor-hacker's remote access tool. The backdoor renames NETSTAT.EXE to NETSTAT.OLD when it is first activated and renames the file back when it is uninstalled. The backdoor also can install itself in a system with modification of startup keys in the Registry or INI files.
+
+### ProRat
+
+ProRat is a Remote Administration Tool written in C, and capable of working with all Windows OS.
+
+ProRat was designed to allow users to control their own computers remotely from other computers. However, attackers have co-opted it for their own nefarious purposes. Some hackers take control of remote computer systems to conduct a denial of service (DoS) attack, which renders the target system unavailable for normal personal or business uses.
+
+### Theef
+
+Theef is a Windows-based application for both client and server. The Theef server is a virus that you install on a target computer, and the Theef client is what you then use to control the virus.
+
+Theef is a Remote Access Trojan written in Delphi, which gives remote attackers system access via port 9871.
+
+### JPS Virus Maker Tool
+
+JPS Virus Maker is a tool to create viruses. It also has a feature for converting a virus into a worm.
+
+
+### Internet Worm Maker Thing
+Internet Worm Maker Thing is an automated scripting tool used to generate malicious code. It enables you to specify criteria down to the most basic element, including the action you want it to perform, it display language, and its launch date.
+
+### Regshot
+
+The purpose of this software is to compare your registry at two separate points by creating a snapshot of the registry before any system changes or when programs are added, removed, or modified and then taking a second snapshot after the modifications then comparing them.
+
+Regshot is a great utility that you can use to compare the amount of registry entries that have been changed during an installation or a change in your system settings. It is a great tool for troubleshooting and monitoring your registry.
+
+### WinPatrol
+
+TCPView is a Windows program that will show you detailed listings of all TCP and UDP endpoints on your system, including the local and remote addresses and state of TCP connections. On Windows Server 2008, Vista, and XP, TCPView also reports the name of the process that owns the endpoint. TCPView provides a more informative and conveniently presented subset of the Netstat program that ships with Windows. The TCPView download includes Tcpvcon, a command-line version with the same functionality.
 
 
 ### SMTP Telnet technique port 25
@@ -1611,7 +1649,17 @@ SSLv2 - DROWN attack
 
 OpenSSL - heartbleed 
 
+# API
 
+RESTful API 
+
+Supports: Headers, DATA, Method, Endpoints 
+
+Method: DELETE, POST, GET, PUT,
+
+REST API
+
+Layered system, Uniform interface , Cacheability ,Statelessness 
 ### WireShark
 
 Filter examples:
