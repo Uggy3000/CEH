@@ -19,8 +19,11 @@ Non-repudiation - is important to ensure that a party cannot deny having sent or
 # Attack Types
 
 OS: Attacks targeting default OS settings
+
 App level: Application code attacks
+
 Shrink Wrap: off-the-shelf scripts and code
+
 Misconfiguration: not configured well
 
 # Testing Types
@@ -71,6 +74,7 @@ Agile Penetration Testing
 ### OWASP Top 10 CEHv12
 
 Top 10:2021 List
+
 A01 Broken Access Control
 A02 Cryptographic Failures
 A03 Injection
@@ -84,7 +88,7 @@ A10 Server Side Request Forgery (SSRF)
 
 ### OWASP Top 10 CEHv11
 
-2017 Top 10
+#2017 Top 10
 A1:2017-Injection
 A2:2017-Broken Authentication
 A3:2017-Sensitive Data Exposure
@@ -99,7 +103,7 @@ A10:2017-Insufficient Logging & Monitoring
 
 ### Legal
 
-18 U.S.C 1029 & 1030	
+#18 U.S.C 1029 & 1030	
 
 RFC 1918 – Private IP Standard	SOX – Corporate Finance Processes
 
@@ -170,120 +174,190 @@ Critical 9.0-10.0
 
 ### Cryptography
 
-SYMMETRIC ENCRYPTION
+#SYMMETRIC ENCRYPTION
+
 Only one key used to encrypt and decrypt
 
-SYMMETRIC ALGORITHMS
+#SYMMETRIC ALGORITHMS
+
 DES: 56bit key (8bit parity); fixed block
+
 3DES: 168bit key; keys ≤ 3 (56bit *3)
+
 AES: 128, 192, or 256; replaced DES
+
 IDEA: 128bit key
+
 Twofish: Block cipher key size ≤ 256bit
+
 Blowfish: Rep. by AES; 64bit block
+
 RC: incl. RC2 ―› RC6. 2,040key, RC6 (128bit block)
 
-ASYMMETRIC ENCRYPTION
+#ASYMMETRIC ENCRYPTION
+
 Public key = Encrypt, Private Key = Decrypt
 
-ASYMMETRIC ALGORITHMS
+#ASYMMETRIC ALGORITHMS
+
 Diffie-Hellman: key Exchange, used in SSL/IPSec
+
 ECC: Elliptical Curve. Low process power/Mobile
+
 EI Gamal: !=Primes, log problem to encrypt/sign
+
 RSA: 2 x Prime 4,096bit. Modern std.
 
-HASH ALGORITHMS
+#HASH ALGORITHMS
 MD5: 128bit hash, expres as 32bit hex
+
 SHA1: 160bit hash,rq 4 use in US apps
+
 SHA2: 4 sep hash 224,256,384,512
 
 Public Key is used in IKE, SSL, and PGP
 
 
-TRUST MODELS
+# TRUST MODELS
+
 Web of trust: Entities sign certs for each other
+
 Single Authority: CA at top. Trust based on CA itself
+
 Hierarchical: CA at top. RA’s Under to manage certs
+
 XMKS – XML PKI System
 
-CRYPTOGRAPHY ATTACKS
+#CRYPTOGRAPHY ATTACKS
+
 Known Plain-text: Search plaintext for repeatable sequences. Compare to t versions.
+
 Ciphertext-only: Obtain several messages with same algorithm. Analyze to reveal repeating code.
+
 Replay: Performed in MITM. Repeat exchange to fool system in setting up a comms channel.
 
-DIGITAL CERTIFICATE	
+#DIGITAL CERTIFICATE	
+
 Used to verify user identity = nonrepudiation	Valid from/to: Certificate good through dates
+
 Version: Identifies format. Common = V1	Key usage: Shows for what purpose cert was made
+
 Serial: Uniquely identify the certificate	Subject’s public key: self-explanatory
+
 Subject: Whoever/whatever being identified by cert	Optional fields: e.g., Issuer ID, Subject Alt Name…
+
 Algorithm ID: Algorithm used	
+
 Issuer: Entity that verifies authenticity of certificate	
 
 
 
 ### Reconnaissance
 
-DEFINITION
+#DEFINITION
 Gathering information on targets, whereas foot-printing is mapping out at a high level. These are interchangeable in CEH.
 
-GOOGLE HACKING
+#GOOGLE HACKING
+
 Operator: keyword additional search items
+
 site: Search only within domain
+
 ext: File Extension
+
 loc: Maps Location
+
 intitle: keywords in title tag of page
+
 allintitle: any keywords can be in title
+
 inurl: keywords anywhere in url
+
 allinurl: any of the keywords can be in url
+
 incache: search Google cache only
 
-DNS RECORD TYPES
+#DNS RECORD TYPES
+
 Service (SRV): hostname & port # of servers
+
 Start of Authority (SOA): Primary name server
+
 Pointer (PTR): IP to Hostname; for reverse DNS
+
 Name Server (NS): NameServers with namespace
+
 Mail Exchange (MX): E-mail servers
+
 CNAME: Aliases in zone. list multi services in DNS
+
 Address (A): IP to Hostname; for DNS lookup
+
 DNS footprinting: whois, nslookup, dig
 
-DNS
+#DNS
+
 port 53 nslokup (UDP), Zone xfer (TCP)
 
-TCP HEADER FLAGS
+#TCP HEADER FLAGS
+
 URG: Indicates data being sent out of band
+
 ACK: Ack to, and after SYN
+
 PSH: Forces delivery without concern for buffering
+
 RST: Forces comms termination in both directions
+
 SYN: Initial comms. Parameters and sequence #’s
+
 FIN: ordered close to communications
 
-DHCP
+#DHCP
+
 Client — Discover-> Server
+
 Client<—Offers—- Server
+
 Client —Request—> Server
+
 Client<—-ACK—- Server
+
 IP is removed from pool
 
 
 ### Scanning & Enumeration
 
-ICMP MESSAGE TYPES	
+#ICMP MESSAGE TYPES	
+
 0: Echo Reply: Answer to type 8 Echo Request	
+
 3: Destination Unreachable: No host/ network Codes	4: Source Quench: Congestion control message
+
 0 ― Destination network unreachable	5: Redirect: 2+ gateways for sender to use or the best route not the configured default gateway
-Codes
+
+#Codes
 1 ― Destination host unreachable	0 ― redirect datagram for the network
+
 6 ― Network unknown	1 ― redirect datagram for the host
+
 7 ― Host unknown	8: Echo Request: Ping message requesting echo
+
 9 ― Network administratively prohibited	11: Time Exceeded: Packet too long be routed
+
 10 ― Host administratively prohibited	
+
 13 ― Communication administratively prohibited	
 
 
 ping-n 6 192.168.0.101
+
 /n <count>Specifies the number of echo Request messages be sent. The default is 4.
+
 /t Specifies ping continue sending echo Request messages to the destination until interrupted
+
 /s <count>Specifies that the Internet timestamp option in the IP header is used to record the time of arrival for the echo Request message and corresponding echo Reply message for each hop. The count must be a minimum of 1 and a maximum of 4. This is required for link-local destination addresses.
+
 /a Specifies reverse name resolution be performed on the destination IP address. If this is successful, ping displays the corresponding host name.
 
 
@@ -319,50 +393,77 @@ IPV4 NOTATION	Prefix
 ### HTTP headers:
 
 Accept - Accept: text/html	
+
 Accept-Charset	- Accept-Charset: utf-8	
+
 Cache-Control	- Cache-Control: no-cache	
+
 Connection	- Connection: keep-alive
+
 Content-Encoding	-  Content-Encoding: gzip	
+
 HTTP2-Settings	- HTTP2-Settings: token64	
+
 Transfer-Encoding	- Transfer-Encoding: chunked	
+
 User-Agent	- User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0
+
 
 ### Common non-standard request fields
 
 X-Forwarded-For - X-Forwarded-For: 129.78.138.66, 129.78.64.103
+
 X-Http-Method-Override  - X-HTTP-Method-Override: DELETE
+
 X-Csrf-Token - X-Csrf-Token: i8XNjC4b8KVok4uw5RftR38Wgp2BFwql
+
 
 ### Standard response fields
 
 
 Access-Control-Allow-Origin, - Access-Control-Allow-Origin: *	
-Access-Control-Allow-Credentials, - Access-Control-Allow-Origin: *	
+
+Access-Control-Allow-Credentials, - Access-Control-Allow-Origin: *
+	
 Access-Control-Expose-Headers, - Access-Control-Allow-Origin: *	
+
 Access-Control-Max-Age, - Access-Control-Allow-Origin: *	
+
 Access-Control-Allow-Methods, - Access-Control-Allow-Origin: *	
+
 Access-Control-Allow-Headers - Access-Control-Allow-Origin: *	
+
 Allow - Allow: GET, HEAD	
+
 Cache-Control	 - Cache-Control: max-age=3600	
+
 Content-MD5	 - Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==	
 
 Server - Server: Apache/2.4.1 (Unix)	
+
 X-Frame-Options - X-Frame-Options: deny	
 
 Common non-standard response fields
 
 Content-Security-Policy, - X-WebKit-CSP: default-src 'self'
+
 X-Content-Security-Policy, - X-WebKit-CSP: default-src 'self'
+
 X-WebKit-CSP - X-WebKit-CSP: default-src 'self'
+
 Expect-CT - Expect-CT: max-age=604800, enforce, report-uri="https://example.example/report"
+
 X-Content-Type-Options - X-Content-Type-Options: nosniff
+
 X-Powered-By - X-Powered-By: PHP/5.4.0
+
 X-XSS-Protection - X-XSS-Protection: 1; mode=block
 
 
 
 
 ### HTTP Methods:
+
 GET
 HEAD
 OPTIONS
@@ -373,15 +474,16 @@ POST
 PATCH
 CONNECT
 
-HTTP ERROR CODES
-Status code	Meaning
-1xx Informational	 
+#HTTP ERROR CODES
+
+##Status code	Meaning
+#1xx Informational	 
 100	Continue
 101	Switching protocols
 102	Processing
 103	Early Hints
  	 
-2xx Succesful	 
+#2xx Succesful	 
 200	OK
 201	Created
 202	Accepted
@@ -393,7 +495,7 @@ Status code	Meaning
 208	Already Reported
 226	IM Used
  	 
-3xx Redirection	 
+#3xx Redirection	 
 300	Multiple Choices
 301	Moved Permanently
 302	Found (Previously "Moved Temporarily")
@@ -404,7 +506,7 @@ Status code	Meaning
 307	Temporary Redirect
 308	Permanent Redirect
  	 
-4xx Client Error	 
+#4xx Client Error	 
 400	Bad Request
 401	Unauthorized
 402	Payment Required
@@ -435,7 +537,7 @@ Status code	Meaning
 431	Request Header Fields Too Large
 451	Unavailable For Legal Reasons
  	 
-5xx Server Error	 
+#5xx Server Error	 
 500	Internal Server Error
 501	Not Implemented
 502	Bad Gateway
@@ -451,46 +553,82 @@ Status code	Meaning
 ### IMPORTANT PORT NUMBERS		
 	
 FTP:	20/21	
+
 Telnet:	23	
+
 SSH:	22	
+
 SMTP:	25	/ SMTPS 587 / StarTLS 465 Common default non official 2525
+
 WINS:	42	
+
 TACACS:	49	
+
 DNS:	53	TCP/UDP
+
 Kerberos:	88	UDP
+
 NTP 123 TCP 
+
 NetBIOS/SMB:	137-139
+
 SMB v2/v3 over TCP 445
+
 IMAP:	143 / 993 SSL TCP
+
 POP3:	110 /	995 SSL TCP
+
 SNMP:	161/162
+
 LDAP:	389
+
 HTTP:	80 / 8080
+
 HTTPS:	443
+
 CIFS:	445
+
 RADIUS:	1812 UDP TCP
+
 RDP:	3389
+
 IRC:	6667
+
 Printer:	515,631,9100
+
 Portmapper (Linux):	111	
+
 Tini:	7777
+
 NNTP:	119	
+
 NetBus:	12345
+
 NTP:	123	
+
 Back Orifice:	27374
+
 RPC-DCOM:	135	
+
 Sub7:	31337
+
 meterpreter / metasploit 4444
 
 
 ### OSI model 
 
 7	Application	Data	High-level protocols such as for resource sharing or remote file access, e.g. HTTP. ( SOAP; DHCP; HTTPS; HTTP; POP3; SNMP; SMTP; BOOTP; DNS; telent; SSH; IMAP)
+
 6	Presentation	Translation of data between a networking service and an application; including character encoding, data compression and encryption/decryption ( TLS; SSL; AFP; LPP; ICA)
+
 5	Session	Managing communication sessions, i.e., continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes ( PAP; RPC; SMB; SOCKS; SMPP)
+
 4	Transport	Segment, Datagram	Reliable transmission of data segments between points on a network, including segmentation, acknowledgement and multiplexing ( NetBIOS; TCP; UDP; iSCSI; AH; TFTP)
+
 3	Network	Packet	Structuring and managing a multi-node network, including addressing, routing and traffic control (NAT; ICMP; RIP; IP; OSPF; IPsec; Packet filtering)
+
 2	Data link	Frame	Transmission of data frames between two nodes connected by a physical layer (ARP; DTP; Frame rate; STP; L2TP; PPP; PPTP; VLAN Sniffers )
+
 1	Physical	Bit, Symbol	Transmission and reception of raw bit streams over a physical medium  ( Fiber optics; RS232; IEEE 1394 Interfaces; DSL; ISDN)
 
 
@@ -499,109 +637,159 @@ meterpreter / metasploit 4444
 Nmap is the de-facto tool for this pen-test phase
 
 NMAP <SCAN OPTIONS> <TARGET>
+
 -sA: ACK scan -sF: FIN scan
+
 -sS:SYN -sT: TCP scan
+
 -sI: IDLS scan -sn: PING sweep
+
 -sN: NULL -sS: Stealth Scan
+
 -sR: RPC scan -Po: No ping
+
 -sW: Window -sX: XMAS tree scan
+
 -PI: ICMP ping – PS: SYN ping
+
 -PT: TCP ping -oN: Normal output
+
 -oX: XML output -A OS/Vers/Script
+
 -T<0-5>: Slow – Fast ( 0 least detective)
+
 Nmap  -A 10.10.10.10  (aggressive scan- Traceroute, T4, OS)
+
 nmap  -sC  (service scan)
+
 nmap -sV  (version scan)
+
 nmap  -sP 10.10.10.10/24  (how many hosts are up in the whole network)/ping scan
+
 nmap  -sL  (hostnames)
+
 nmap  -oN <filename>  (to save output in a file)
+
 nmap  -F  (fast scan)
+
 nmap  -O  (os scan)
 
 nmap smb scripts:
+
 nmap --script smb-os-discovery.nse -p445 <ip>  (enumerate os, domain name,etc)
+
 nmap --script smb-enum-users.nse -p445 <ip>  (used to enumerate all users on remote Windows system using SAMR enumeration and LSA bruteforcing)
+
 nmap -p 445 --script=smb-enum-shares.nse, smb-enum-users.nse 10.10.19.21 (smb users and shares)
 
-NMAP SCAN TYPES
+#NMAP SCAN TYPES
 
 TCP: 3 way handshake on all ports.
+
 Open = SYN/ACK, Closed = RST/ACK
+
 SYN: SYN packets to ports (incomplete handshake).
+
 Open = SYN/ ACK, Closed = RST/ ACK
+
 FIN: Packet with FIN flag set
+
 Open = no response, Closed = RST
+
 XMAS: Multiple flags set (fin, URG, and PSH) Binary Header: 00101001
+
 Open = no response, Closed = RST
+
 ACK: Used for Linux/Unix systems
+
 Open = RST, Closed = no response
+
 IDLE: Spoofed IP, SYN flag, designed for stealth.
+
 Open = SYN/ACK, Closed= RST/ACK
+
 NULL: No flags set. Responses vary by OS. NULL scans are designed for Linux/ Unix machines.
 
 
 ### NETBIOS	
+
 nbstat	
+
 nbtstat -a COMPUTER 190	nbtstat -S 10 -display ses stats every 10 sec
+
 nbtstat -A 192.168.10.12 remote table	1B ==master browser for the subnet
+
 nbtstat -n local name table	1C == domain controller
+
 nbtstat -c local name cache	1D == domain master browser
+
 nbtstat -r -purge name cache	
 
 ### Sniffing and Evasion
-IPV4 AND IPV6
+
+#IPV4 AND IPV6
+
 IPv4 == unicast, multicast, and broadcast
+
 IPv6 == unicast, multicast, and anycast.
+
 IPv6 unicast and multicast scope includes link local, site local and global.
 
-MAC ADDRESS
+#MAC ADDRESS
+
 First half = 3 bytes (24bits) = Org UID
+
 Second half = unique number
 
-NAT (NETWORK ADDRESS TRANSLATION)
+#NAT (NETWORK ADDRESS TRANSLATION)
+
 Basic NAT is a one-to-one mapping where each internal IP== a unique public IP.
+
 Nat overload (PAT) == port address translation. Typically used as is the cheaper option.
 
-STATEFUL INSPECTION
+#STATEFUL INSPECTION
 Concerned with the connections. Doesn’t sniff ever packet, it just verifies if it’s a known connection, then passes along.
 
-HTTP TUNNELLING
+#HTTP TUNNELLING
 Crafting of wrapped segments through a port rarely filtered by the Firewall (e.g., 80) to carry payloads that may otherwise be blocked.
 
-IDS EVASION TACTICS
+#IDS EVASION TACTICS
 Slow down OR flood the network (and sneak through in the mix) OR fragmentation
 
-TCPDUMP SYNTAX
-#~tcpdump flag(s) interface
+#TCPDUMP SYNTAX
+~tcpdump flag(s) interface
 
-SNORT IDS	
+#SNORT IDS	
 It has 3 modes:	Sniffer/Packet logger/ Network IDS.
 Config file: /etc/snort, or c:snortetc #~alert tcp!HOME_NET any ->$HOME_NET 31337 (msg : “BACKDOOR ATTEMPT-Back-orifice.”)	Any packet from any address !=home network. Using any source port, intended for an address in home network on port 31337, send msg.
 Span port: port mirroring	False Negative: IDS incorrectly reports stream clean
 
-LM HASHING
+#LM HASHING
 7 spaces hashed: AAD3B435B51404EE
 
-SAM FILE
+#SAM FILE
 C:/Windows/system32/config
 
 
 ### Attacking a System
-C|EH RULES FOR PASSWORDS
+
+#C|EH RULES FOR PASSWORDS
 Must not contain user’s name. Min 8 chars.
 3 of 4 complexity components. E.g., Special, Number, Uppercase, Lowercase
 
-ATTACK TYPES
+#ATTACK TYPES
 Passive Online: Sniffing wire, intercept clean text password / replay / MITM
 Active Online: Password guessing.
 Offline: Steal copy of password i.e., SAM file. Cracking efforts on a separate system
 Non-electronic: Social Engineering
 
-SIDEJACKING
+#SIDEJACKING
 Steal cookies exchanged between systems and use tp perform a replay-style attack.
 
-SESSION HIJACKING
+#SESSION HIJACKING
+
 Refers to the active attempt to steal an entire established session from a target
+
 1. Sniff traffic between client and server
 2. Monitor traffic and predict sequence
 3. Desynchronise session with client
