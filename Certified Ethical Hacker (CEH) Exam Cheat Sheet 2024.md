@@ -841,50 +841,73 @@ Tailgating/ Piggybacking
 Quid pro quo
 
 
-COMPUTER BASED ATTACKS
+# OMPUTER BASED ATTACKS
 Phishing – Email SCAM
 Whaling – Targeting CEO’s
 Pharming – Evil Twin Website
 
-TYPES OF SOCIAL ENGINEERS
+# TYPES OF SOCIAL ENGINEERS
 Insider Associates: Limited Authorized Access
 Insider Affiliates: Insiders by virtue of Affiliation that spoof the identity of the Insider
 Outsider Affiliates: Non-trusted outsider that use an access point that was left open
 
-Physical Security
+# Physical Security
+
 3 MAJOR CATEGORIES OF PHYSICAL SECURITY MEASURES
+
 Physical measures: Things you taste, touch, smell
+
 Technical measures: smart cards, biometrics
+
 Operational measures: policies and procedures
 
-Web-Based Hacking
+Prevention, Detection, Recovery
+
+# Web-Based Hacking
+
 CSRF – CROSS SITE REQUEST FORGERY
+
 DOT-DOT-SLASH ATTACK
 Variant of Unicode or un-validated input attack
+
 SQL INJECTION ATTACK TYPES
+
 Union Query: Use the UNION command to return the union of target Db with a crafted Db
+
 Tautology: Term used to describe behavior of a Db when deciding if a statement is true.
+
 Blind SQL Injection: Trial and Error with no responses or prompts.
+
 Error based SQL Injection: Enumeration technique. Inject poorly constructed commands to have Db respond with table names and other information
 
-BUFFER OVERFLOW
+# BUFFER OVERFLOW
+
 A condition that occurs when more data is written to a buffer than it has space to store and results in data corruption. Caused by insufficient bounds checking, a bug, or poor configuration in the program code.
+
 Stack: Premise is all program calls are kept in a stack and performed in order. Try to change a function pointer or variable to allow code exe
+
 Heap: Takes advantage of memory “on top of” the application (dynamically allocated). Use program to overwrite function pointers
+
 NOP Sled: Takes advantage of instruction called “no-op”. Sends a large # of NOP instructions into buffer. Most IDS protect from this attack.
+
 Dangerous SQL functions
+
 The following do not check size of destination buffers: gets() strcpy() stract() printf()
 
 
 ### Wireless  Network Hacking
 
 GSM
+
 Global System for Mobile Communication
+
 Generations: 2G (GSM), 3G (UMTS), 4G (LTE)
+
 Frequency: 900 MHz - 1800 MHz
 
 
-WIRELESS SNIFFING
+# WIRELESS SNIFFING
+
 Compatible wireless adapter with promiscuous mode is required, but otherwise pretty much the same as sniffing wired.
 802.11 SPECIFICATIONS			
 WEP: RC4 with 24bit vector. Kers are 40 or 104bit			
