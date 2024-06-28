@@ -1652,20 +1652,37 @@ OpenSSL - heartbleed
 
 # API
 
-RESTful API 
+### RESTful API 
 
 Supports: Headers, DATA, Method, Endpoints 
 
 Method: DELETE, POST, GET, PUT,
 
-REST API
+### REST API
 
 Layered system, Uniform interface , Cacheability ,Statelessness 
 
+REST supports XML, JSON, plain text, HTML.
 
-SOAP is the Simple Object Access Protocol
+
+
+### SOAP is the Simple Object Access Protocol
 
 SOAP uses an XML data format
+
+### GraphQL 
+
+Injection
+
+SQL Injection
+
+Cross-Site Scripting
+
+OS Command Injection
+
+Server-Side Request Forgery
+
+Broken Authentication & Authorization
 
 # WireShark
 
@@ -1682,7 +1699,7 @@ frame contains traffic [displays all packets that contain the word ‘traffic’
 eth[0x47:2] == 01:80 [This is an example of an offset filter. It sets a filter for the HEX values of 0x01 and 0x80 specifically at the offset location of 0x47]  
 tcp.analysis.flags && !tcp.analysis.window_update [displays all retransmissions, duplicate acks, zero windows, and more in the trace. Helps when tracking down slow application performance and packet loss. It will not include the window updates, since these aren't really important for me to see in most cases.] 
 
-IPSEC:
+# IPSEC:
 
 IPsec suite:
 
