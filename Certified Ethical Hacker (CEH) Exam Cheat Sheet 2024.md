@@ -7,9 +7,13 @@ CIA Triad - Confidentiality, integrity, availability, Authenticity, Non-repudiat
 
 
 Confidentiality - is important to protect sensitive information from being disclosed to unauthorized parties. This includes protecting data at rest, in transit, and in use. Common techniques used to maintain confidentiality include encryption, access controls, and data masking.
+
 Integrity - is important to ensure that information has not been tampered with or modified in an unauthorized way. This includes protecting data from unauthorized modification, deletion or addition. Common techniques used to maintain integrity include digital signatures, message authentication codes, and data hashing.
+
 Availability - is important to ensure that information and systems are accessible to authorized users when they need them. This includes protecting against denial of service attacks and ensuring that systems are highly available and can withstand failures. Common techniques used to maintain availability include load balancing, redundancy, and disaster recovery planning.
+
 Authenticity - is important to ensure that information and communication come from a trusted source. This includes protecting against impersonation, spoofing and other types of identity fraud. Common techniques used to establish authenticity include authentication, digital certificates, and biometric identification.
+
 Non-repudiation - is important to ensure that a party cannot deny having sent or received a message or transaction. This includes protecting against message tampering and replay attacks. Common techniques used to establish non-repudiation include digital signatures, message authentication codes and timestamps.
 
 # Attack Types
@@ -46,6 +50,7 @@ White box - have full information about the internal work
 
 
 ### Types of penetration testing
+
 Internal & External Network Penetration Testing
 
 Wireless Penetration Testing
@@ -64,6 +69,7 @@ Agile Penetration Testing
 
 
 ### OWASP Top 10 CEHv12
+
 Top 10:2021 List
 A01 Broken Access Control
 A02 Cryptographic Failures
@@ -77,6 +83,7 @@ A09 Security Logging and Monitoring Failures
 A10 Server Side Request Forgery (SSRF)
 
 ### OWASP Top 10 CEHv11
+
 2017 Top 10
 A1:2017-Injection
 A2:2017-Broken Authentication
@@ -91,12 +98,19 @@ A10:2017-Insufficient Logging & Monitoring
 
 
 ### Legal
+
 18 U.S.C 1029 & 1030	
+
 RFC 1918 – Private IP Standard	SOX – Corporate Finance Processes
+
 RFC 3227 – Collecting and storing data	GLBA – Personal Finance Data
+
 ISO 27002 – InfoSec Guideline	FERPA – Education Records
+
 CAN-SPAM – email marketing	FISMA – Gov Networks Security Std
+
 SPY-Act – License Enforcement	CVSS – Common Vuln Scoring System
+
 DMCA – Intellectual Property	CVE – Common Vulns and Exposure
 
 
@@ -104,35 +118,54 @@ DMCA – Intellectual Property	CVE – Common Vulns and Exposure
 ### Regional Registry Coverage Map
 
 African Network Coordination Centre (AFRINIC)
+
 American Registry for Internet Numbers (ARIN)	
+
 Asia-Pacific Network Coordination Centre (APNIC)	
+
 Latin American and Caribbean Internet Addresses Registry (LACNIC)	
+
 Réseaux IP Européens Network Coordination Centre (RIPE NCC)	
 
 ### Windows The SNMP Management Information Base (MIB)
 
 DHCP.MIB	Microsoft-defined MIB that contains object types for monitoring the network traffic between remote hosts and DHCP servers
+
 HOSTMIB.MIB	Contains object types for monitoring and managing host resources
+
 LMMIB2.MIB	Covers workstation and server services
+
 MIB_II.MIB	Contains the Management Information Base (MIB-II), which provides a simple, workable architecture and system for managing TCP/IP-based internets
+
 WINS.MIB	Microsoft-defined MIB for the Windows Internet Name Service (WINS)
 
 ### SNMP
+
 Uses a community string for PW
+
 SNMPv3 encrypts the community strings
 
 ### The Common Vulnerability Scoring System (CVSS) 
+
 none 0.0
+
 Low 0.1 -.3.9
+
 Medium 4.0 - 6.9
+
 High 7.0 -8.9
+
 Critical 9.0-10.0
 
 
 ### XOR Logic
+
 0 xor 0 = 0
+
 1 xor 1 = 0
+
 1 xor 0 = 1
+
 0 xor 1 = 1
 
 ### Cryptography
@@ -260,16 +293,26 @@ ping-n 6 192.168.0.101
 Method of the representing IP Addresses.
 
 IPV4 NOTATION	Prefix
+
 /30=4	.255.252
+
 /28=16	.255.240
+
 /26=64	.255.192
+
 /24=256	. 255.0
+
 /22=1024	.252.0
+
 /20=4096	.240.0
 
+
 ### PORT NUMBERS
+
 0 — 1023: Well-known
+
 1024 — 49151: Registered
+
 49152 — 65535: Dynamic
 
 
@@ -298,7 +341,7 @@ Access-Control-Allow-Credentials, - Access-Control-Allow-Origin: *
 Access-Control-Expose-Headers, - Access-Control-Allow-Origin: *	
 Access-Control-Max-Age, - Access-Control-Allow-Origin: *	
 Access-Control-Allow-Methods, - Access-Control-Allow-Origin: *	
-Access-Control-Allow-Headers[ - Access-Control-Allow-Origin: *	
+Access-Control-Allow-Headers - Access-Control-Allow-Origin: *	
 Allow - Allow: GET, HEAD	
 Cache-Control	 - Cache-Control: max-age=3600	
 Content-MD5	 - Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==	
@@ -691,6 +734,10 @@ Network: Spreads via network shares.
 Polymorphic virus: Constantly changing signature makes it hard to detect.
 Shell virus: Like boot sector but wrapped around application code, and run on application start.
 Stealth: Hides in files, copies itself to deliver payload.
+
+Covert Channel Tunneling Trojan (CCTT) - Enables attackers to gain shell interfaces into and out of a network using authorized channels covertly - RAT
+
+ 
 
 DOS TYPES	
 SYN Attack:	Send thousands of SYN packets with a false IP address. Target will attempt SYN/ACK response. All machine resources will be engaged.
@@ -1311,6 +1358,10 @@ ls
 Zigbee - Protocol based on the IEEE 203.15.4 standard; - Range of 10-100 m. - Designed for small-scale projects which need wireless connection.
 
 Dragonblood - WPA3 
+
+CCMP (Counter Mode Cipher Block Chaining Message Authentication Code Protocol) Provides Integrity- WPA2
+
+MIC (Message Integrity Check) MIC Prevent MITM attack - WEP 
 
 Evil twin attack - SSID Clone
 
