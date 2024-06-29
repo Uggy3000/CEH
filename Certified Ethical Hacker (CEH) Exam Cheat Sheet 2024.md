@@ -952,23 +952,34 @@ Password salting is the process of adding additional character in the password t
 
 
 # Trojans and Other Attacks
+
 ### VIRUS TYPES
+
 Boot: Moves boot sector to another location. Almost impossible to remove.
+
 Camo: Disguise as legit files.
+
 Cavity: Hides in empty areas in exe.
+
 Marco: Written in MS Office Macro Language
+
 Multipartite: Attempts to infect files and boot sector at same time.
+
 Metamorphic virus: Rewrites itself when it infects a new file.
+
 Network: Spreads via network shares.
+
 Polymorphic virus: Constantly changing signature makes it hard to detect.
+
 Shell virus: Like boot sector but wrapped around application code, and run on application start.
+
 Stealth: Hides in files, copies itself to deliver payload.
 
 Covert Channel Tunneling Trojan (CCTT) - Enables attackers to gain shell interfaces into and out of a network using authorized channels covertly - RAT
 
  
 
-DOS TYPES	
+# DOS TYPES	
 SYN Attack:	Send thousands of SYN packets with a false IP address. Target will attempt SYN/ACK response. All machine resources will be engaged.
 SYN Flood:	Send thousands of SYN Packets but never respond to any of the returned SYN/ACK packets. Target will run out of available connections.
 ICMP Flood:	Send ICMP Echo packets with a fake source address. Target attempts to respond but reaches a limit of packets sent per second.
