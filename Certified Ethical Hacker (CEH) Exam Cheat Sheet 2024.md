@@ -328,7 +328,14 @@ Client<—-ACK—- Server
 IP is removed from pool
 
 
-### Scanning & Enumeration
+# Scanning & Enumeration
+
+###
+passive OS fingerprinting
+
+tcpdump
+p0f
+
 
 #ICMP MESSAGE TYPES	
 
@@ -1189,6 +1196,8 @@ NMap (Zenmap)
 NetScan Tools Pro
 Hping
 Netcat
+
+
 
 War Dialing
 THC-Scan
