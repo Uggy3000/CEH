@@ -769,7 +769,10 @@ Span port: port mirroring	False Negative: IDS incorrectly reports stream clean
 #LM HASHING
 7 spaces hashed: AAD3B435B51404EE
 
+The right sidde of the hash ends with 1404EE the password is less than eight characters
+
 #SAM FILE
+
 C:/Windows/system32/config
 
 
