@@ -182,7 +182,7 @@ Only one key used to encrypt and decrypt
 
 DES: 56bit key (8bit parity); fixed block
 
-3DES: 168bit key; keys ≤ 3 (56bit *3)
+3DES: 168bit key; keys ≤ 3 56bit *3
 
 AES: 128, 192, or 256; replaced DES
 
@@ -951,8 +951,8 @@ Password salting is the process of adding additional character in the password t
 
 
 
-Trojans and Other Attacks
-VIRUS TYPES
+# Trojans and Other Attacks
+### VIRUS TYPES
 Boot: Moves boot sector to another location. Almost impossible to remove.
 Camo: Disguise as legit files.
 Cavity: Hides in empty areas in exe.
