@@ -217,6 +217,8 @@ SHA2: 4 sep hash 224,256,384,512
 
 Public Key is used in IKE, SSL, and PGP
 
+Hashing provides integrity
+
 
 # TRUST MODELS
 
