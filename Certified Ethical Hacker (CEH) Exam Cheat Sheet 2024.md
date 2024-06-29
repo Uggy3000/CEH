@@ -981,11 +981,17 @@ Covert Channel Tunneling Trojan (CCTT) - Enables attackers to gain shell interfa
 
 # DOS TYPES	
 SYN Attack:	Send thousands of SYN packets with a false IP address. Target will attempt SYN/ACK response. All machine resources will be engaged.
+
 SYN Flood:	Send thousands of SYN Packets but never respond to any of the returned SYN/ACK packets. Target will run out of available connections.
+
 ICMP Flood:	Send ICMP Echo packets with a fake source address. Target attempts to respond but reaches a limit of packets sent per second.
+
 Application level:	Send “legitimate” traffic to a web application than it can handle.
+
 Smurf:	Send large number of pings to the broadcast address of the subnet with source IP spoofed to target. Subnet will send ping responses to target.
+
 Fraggle Attack:	Similar to Smurf but uses UDP.
+
 Ping of Death:	Attacker fragments ICMP message to send to target. When the fragments are reassembled, the resultant ICMP packet is larger than max size and crashes the system
 
 # Linux:
